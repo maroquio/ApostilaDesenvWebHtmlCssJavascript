@@ -1,0 +1,481 @@
+\chapter{Formulários}
+
+Formulários são elementos fundamentais em páginas web que permitem aos usuários inserir informações e interagir com o conteúdo do site. Essas informações podem ser coletadas e processadas pelo servidor, permitindo ao desenvolvedor personalizar a experiência do usuário. Neste capítulo, vamos aprender os conceitos básicos sobre formulários e sua importância na criação de páginas web.
+
+\section{Criando um Formulário Básico}
+
+Para criar um formulário em HTML, precisamos utilizar a \textit{tag} \var{<form>}. Esta \textit{tag} permite que os campos de entrada sejam agrupados em um formulário, possibilitando o envio das informações do usuário para um servidor. O exemplo \ref{codigo:form} apresenta a estrutura básica de um formulário.
+
+\begin{htmlcode}{Exemplo de formulário básico.}{codigo:form}
+<form action="processarForm.php" method="post">
+   <label for="nome">Nome:</label>
+   <input type="text" id="nome" name="nome"><br><br>
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email"><br><br>
+   <input type="submit" value="Enviar">
+</form>
+\end{htmlcode}
+
+No exemplo acima, temos um formulário que envia os dados para a página ``processarForm.php'' usando o método POST. Esse formulário possui dois campos de entrada de texto, um para o nome e outro para o e-mail, seguidos por um botão de envio. O atributo \var{for} do \var{<label>} está associado ao atributo \var{id} do \var{<input>}, permitindo ao usuário clicar no rótulo para selecionar o campo de entrada correspondente.
+
+\section{Enviando Dados de Formulários}
+
+Quando o usuário preenche um formulário e clica em ``Enviar'', as informações inseridas são enviadas para o servidor, onde podem ser processadas e armazenadas por um programa que roda no servidor. Esse programa é criado usando-se uma linguagem de programação de aplicações web, como C\#, Python, Java, PHP, Javscript, entre outras. Para enviar os dados do formulário, é preciso especificar o método de envio e o endereço de destino. Isso pode ser feito usando os atributos \var{method} e \var{action} da \textit{tag} \var{<form>}.
+
+O atributo \var{method} especifica o método HTTP que será usado para enviar os dados do formulário. Existem dois métodos comuns: GET e POST. O método GET envia os dados do formulário como parte da URL, enquanto o método POST envia os dados no corpo da requisição. O método POST é geralmente usado quando os dados enviados contêm informações confidenciais, como senhas ou informações financeiras.
+
+O atributo \var{action} especifica a página de destino para onde os dados do formulário serão enviados. Essa página pode ser uma página do próprio site ou de um site externo. Quando o usuário clica no botão ``Enviar'', o navegador redireciona o usuário para a página de destino especificada no atributo \var{action}. O exemplo \ref{codigo:post} mostra um formulário que envia dados usando o método POST, tendo como destino um \textit{script} em linguagem PHP cujo endereço é ``processarForm.php''. Vale ressaltar que existem várias linguagens para criação de programas servidor (aplicações web), sendo que a PHP foi usado como exemplo por ser uma das mais populares.
+
+\begin{htmlcode}{Exemplo de formulário com método POST.}{codigo:post}
+<form action="processarForm.php" method="post">
+   <label for="nome">Nome:</label>
+   <input type="text" id="nome" name="nome"><br><br>
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email"><br><br>
+   <input type="submit" value="Enviar">
+</form>
+\end{htmlcode}
+
+No exemplo \ref{codigo:post}, o método POST é especificado no atributo \var{method} da \textit{tag} \var{form} e os dados do formulários são enviados através do corpo da requisição quando o usuário clica no botão ``Enviar''. O processamento do formulário, neste caso, vai ocorrer no \textit{script} ``processarForm.php'' definido no atributo \var{action}. No exemplo \ref{codigo:get}, a seguir, temos um formulário que envia dados usando o método GET para serem processados pelo \textit{script} ``processarForm.php''.
+
+\begin{htmlcode}{Exemplo de formulário com método GET.}{codigo:get}
+<form action="processarForm.php" method="get">
+   <label for="nome">Nome:</label>
+   <input type="text" id="nome" name="nome"><br><br>
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email"><br><br>
+   <input type="submit" value="Enviar">
+</form>
+\end{htmlcode}
+
+No exemplo \ref{codigo:get}, o método GET é especificado no atributo \var{method} da \textit{tag} \var{<form>}, e os dados do formulário são enviados como parte da URL quando o usuário clica no botão ``Enviar''. Observe que o endereço de destino é o mesmo para ambos os exemplos, que é ``processarForm.php''.
+
+\section{Campos de Formulários}
+
+Os campos de formulários permitem aos usuários inserir informações em um formulário. Existem diversos tipos de campos de formulários disponíveis em HTML, incluindo campos de texto, e-mails, senhas, \textit{checkboxes}, \textit{radio buttons} e \textit{selects}. Esta seção apresenta uma explicação sobre cada um desses tipos de campos.
+
+\subsection{Campos de Texto Longo}
+
+Os campos de texto longo permitem que os usuários insiram uma ou mais linhas de texto em um formulário. Eles são criados usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{text} ou \var{textarea}. O exemplo \ref{codigo:text} mostra como criar um campo de texto em HTML.
+
+\begin{htmlcode}{Exemplo de campo de texto longo.}{codigo:text}
+<label for="comentario">Deixe um comentário:</label><br>
+<textarea id="comentario" name="comentario" rows="5" cols="50"></textarea>
+\end{htmlcode}
+
+Neste exemplo, a \textit{tag} \var{<textarea>} é usada para criar um campo de texto longo com 5 linhas e 50 colunas. O atributo \var{id} é usado para associar o rótulo do campo de texto e o atributo \var{name} é usado para identificar o campo de texto no formulário.
+
+\subsection{Campos de E-mail e Senha}
+
+Os campos de e-mail e senha são semelhantes aos campos de texto, mas possuem recursos adicionais. O campo de e-mail é usado para capturar endereços de e-mail e o campo de senha é usado para capturar senhas. O código \ref{codigo:email_senha} mostra um exemplo de uso.
+
+\begin{htmlcode}{Exemplo de campos de e-mail e senha.}{codigo:email_senha}
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email"><br><br>
+
+<label for="senha">Senha:</label>
+<input type="password" id="senha" name="senha"><br><br>
+\end{htmlcode}
+
+Neste exemplo, o campo de e-mail é criado usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{email}. O campo de senha é criado usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{password}.
+
+\subsection{\textit{Checkboxes}}
+
+Os \textit{checkboxes} são usados para permitir que os usuários selecionem uma ou mais opções em um formulário. Eles são criados usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{checkbox}. O código \ref{codigo:checkbox} mostra um exemplo de como criar um \textit{checkbox}.
+
+\begin{htmlcode}{Exemplos de \textit{checkboxes}.}{codigo:checkbox}
+<input type="checkbox" id="checkbox1" name="checkbox1" value="1">
+<label for="checkbox1">Opção 1</label><br>
+<input type="checkbox" id="checkbox2" name="checkbox2" value="2">
+<label for="checkbox2">Opção 2</label><br>
+<input type="checkbox" id="checkbox3" name="checkbox3" value="3">
+<label for="checkbox3">Opção 3</label><br>
+\end{htmlcode}
+
+Neste exemplo, três \textit{checkboxes} são criados usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{checkbox}. O atributo \var{id} é usado para associar o rótulo (\var{label}) ao campo (\var{input}). É importante ressaltar que essa associação de um rótulo a um campo tem funções semântica e interativa. A função semântica vai proporcionar recursos de acessibilidade, dando um título ao campo, enquanto a função interativa faz com que, ao clicar no rótulo, o campo associado receba o foco de digitação.
+
+\subsection{\textit{Radio Buttons}}
+
+Os \textit{radio buttons} são usados para permitir que os usuários selecionem uma opção em um conjunto de opções mutuamente exclusivas. Eles são criados usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{radio}. O código \ref{codigo:radio} mostra um exemplo de como criar \textit{radio buttons} em HTML.
+
+\begin{htmlcode}{Exemplo de campo de checagem exclusiva com elementos \textit{radio buttons}.}{codigo:radio}
+<label for="opcao1">Opção 1</label>
+<input type="radio" id="opcao1" name="opcao" value="1"><br>
+<label for="opcao2">Opção 2</label>
+<input type="radio" id="opcao2" name="opcao" value="2"><br>
+<label for="opcao3">Opção 3</label>
+<input type="radio" id="opcao3" name="opcao" value="3"><br>
+\end{htmlcode}
+
+Neste exemplo, três \textit{radio buttons} são criados usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{radio}. O atributo \var{name} é usado para agrupar as opções mutuamente exclusivas. Quando o usuário seleciona uma opção, todas as outras opções no mesmo grupo são desmarcadas.
+
+\subsection{\textit{Selects}}
+
+Os selects são usados para permitir que os usuários selecionem uma opção em um conjunto de opções. Eles são criados usando a \textit{tag} \var{<select>} com a \textit{tag} \var{<option>} dentro dela. O código \ref{codigo:select} um exemplo de como criar um \var{select}.
+
+\begin{htmlcode}{Exemplo de campo de seleção com elemento \var{select}.}{codigo:select}
+<label for="esporte">Esporte favorito:</label>
+<select id="esporte" name="esporte">
+   <option value="futebol">Futebol</option>
+   <option value="basquete">Basquete</option>
+   <option value="volei">Vôlei</option>
+</select><br><br>
+\end{htmlcode}
+
+Neste exemplo, um campo de seleção é criado usando a \textit{tag} \var{<select>} e três opções são adicionadas usando a \textit{tag} \var{<option>}. O atributo \var{value} é usado para definir o valor da opção que será enviado para o servidor quando o usuário seleciona uma opção.
+
+\section{Validação de Formulários com Atributos HTML}
+
+Os atributos HTML fornecem uma maneira fácil e rápida de validar os dados inseridos pelo usuário em um formulário. O uso desses atributos complementa a validação via JavaScript. Esta seção apresenta alguns dos atributos de validação disponíveis em HTML.
+
+\subsection{Atributo \var{required}}
+
+O atributo \var{required} é usado para garantir que um campo de entrada seja preenchido antes que o formulário possa ser enviado. O código \ref{codigo:required} mostra um exemplo de uso.
+
+\begin{htmlcode}{Exemplo de campo de texto com o atributo \var{required}.}{codigo:required}
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+\end{htmlcode}
+
+Neste exemplo, o atributo \var{required} é adicionado ao campo de texto para garantir que o usuário insira um nome antes que o formulário seja enviado.
+
+\subsection{Atributos \var{min} e \var{max}}
+
+O atributo \var{min} é usado para definir o valor mínimo que pode ser inserido em um campo de entrada, enquanto o atributo \var{max} é usado para definir o valor máximo. Esses atributos são úteis para garantir que os usuários insiram valores válidos em campos numéricos, datas ou horários. O código \ref{codigo:min_max} mostra um exemplo de como usar os atributos \var{min} e \var{max} em um campo numérico.
+
+\begin{htmlcode}{Exemplo de campo de número com os atributos \var{min} e \var{max}.}{codigo:min_max}
+<label for="idade">Idade:</label>
+<input type="number" id="idade" name="idade" min="18" max="65">
+\end{htmlcode}
+
+Neste exemplo, os atributos \var{min} e \var{max} são adicionados ao campo de número para garantir que o usuário insira uma idade entre 18 e 65 anos.
+
+\subsection{Atributo \var{pattern}}
+
+O atributo \var{pattern} é usado para especificar uma expressão regular que deve corresponder ao valor inserido em um campo de entrada. Isso é útil para garantir que os usuários insiram valores válidos em campos de entrada que requerem um formato específico, como um endereço de e-mail ou um número de telefone. O código \ref{codigo:pattern} mostra um exemplo de como usar o atributo \var{pattern} em um campo de entrada de texto comum.
+
+\begin{htmlcode}{Exemplo de campo de entrada com o atributo \var{pattern}.}{codigo:pattern}
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+\end{htmlcode}
+
+Neste exemplo, o atributo \var{pattern} é adicionado ao campo de entrada de e-mail para garantir que o valor inserido corresponda a um endereço de e-mail válido. A expressão regular especificada no atributo \var{pattern} é usada para validar o valor inserido.
+
+\subsection{Atributos \var{maxlength} e \var{minlength}}
+
+O atributo \var{maxlength} é usado para definir o número máximo de caracteres que podem ser inseridos em um campo de entrada, enquanto o atributo \var{minlength} é usado para definir o número mínimo de caracteres. Esses atributos são úteis para limitar o tamanho do texto inserido em campos de texto. O código \ref{codigo:min_max_length} mostra um exemplo de como usar os atributos \var{maxlength} e \var{minlength} em um campo de texto.
+
+\begin{htmlcode}{Exemplo de campo de texto com os atributos \var{maxlength} e \var{minlength}.}{codigo:min_max_length}
+<label for="comentario">Deixe um comentário:</label><br>
+<textarea id="comentario" name="comentario" minlength="10" maxlength="500"></textarea>
+\end{htmlcode}
+
+Neste exemplo, os atributos \var{maxlength} e \var{minlength} são adicionados ao campo de texto para garantir que o usuário insira um comentário com pelo menos 10 caracteres e no máximo 500 caracteres.
+
+\section{Tipos de Campos Avançados}
+
+Nesta seção, serão apresentados os tipos de campos avançados disponíveis em HTML, bem como seus atributos e exemplos de uso.
+
+\subsection{Botão}
+
+O campo do tipo botão é utilizado para criar botões que executam ações específicas em um formulário. Esses botões não enviam dados do formulário para o servidor, apenas realizam alguma ação definida pelo programador. Para criar um botão, utiliza-se a \textit{tag} \var{<button>} com o atributo \var{type} definido como \var{button}. O exemplo \ref{codigo:button} a seguir mostra um exemplo de código HTML para criar um botão.
+
+\begin{htmlcode}{Exemplo de campo do tipo botão.}{codigo:button}
+<button type="button">Clique aqui</button>
+\end{htmlcode}
+
+O código \ref{codigo:button} a seguir mostra um exemplo de código HTML para criar um botão. Ao clicar no botão, nada será enviado ao servidor, mas é possível executar uma ação, como redirecionar o usuário para outra página.
+
+\subsection{Cor}
+
+O campo do tipo cor permite que o usuário escolha uma cor a partir de uma paleta de cores. Para criar um campo de seleção de cor, utiliza-se a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{color}. O exemplo \ref{codigo:color} a seguir mostra um exemplo de código HTML para criar um campo de seleção de cor.
+
+\begin{htmlcode}{Exemplo de campo do tipo cor.}{codigo:color}
+<label for="cor">Escolha uma cor:</label>
+<input type="color" id="cor" name="cor">
+\end{htmlcode}
+
+No código \ref{codigo:color}, o campo de seleção de cor é definido pelo atributo \var{type="color"}. Quando o usuário clica no campo, uma paleta de cores é exibida e o usuário pode escolher uma cor. O valor selecionado é enviado para o servidor juntamente com os outros dados do formulário.
+
+\subsection{Data}
+
+O campo do tipo data é utilizado para permitir que o usuário insira uma data. Para criar um campo de data, utiliza-se a \textit{tag} \var{<input>} com o atributo \var{type} definido como \var{date}. O exemplo \ref{codigo:date} a seguir mostra um exemplo de código HTML para criar um campo de data.
+
+\begin{htmlcode}{Exemplo de campo do tipo data.}{codigo:date}
+<label for="data">Insira uma data:</label>
+<input type="date" id="data" name="data">
+\end{htmlcode}
+
+No exemplo \ref{codigo:date}, o campo de data é definido pelo atributo \var{type="date"}. Quando o usuário clica no campo, é exibido um calendário para seleção da data. O valor selecionado é enviado para o servidor juntamente com os outros dados do formulário.
+
+\subsection{Data e Hora}
+
+O campo de data e hora permite que o usuário selecione uma data e hora usando um calendário integrado. Esse campo é criado usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como ``datetime-local''. O formato da data e hora selecionados depende do formato especificado no atributo \var{value}. O exemplo \ref{codigo:datetime-local} mostra um campo de data e hora.
+
+\begin{htmlcode}{Exemplo de campo de data e hora.}{codigo:datetime-local}
+<label for="data-hora">Data e Hora:</label>
+<input type="datetime-local" id="data-hora" name="data-hora" value="2022-04-05T14:30"><br><br>
+\end{htmlcode}
+
+No exemplo acima, o atributo \var{value} especifica a data e hora inicial do campo no formato ``AAAA-MM-DDTHH:MM'', onde ``AAAA'' é o ano, ``MM'' é o mês, ``DD'' é o dia, ``HH'' é a hora e ``MM'' é o minuto. O campo de data e hora exibido para o usuário depende do navegador utilizado e pode variar entre diferentes navegadores.
+
+\subsection{Arquivo}
+
+O campo de seleção de arquivo permite que o usuário selecione um ou mais arquivos do seu computador para serem enviados para o servidor. Esse campo é criado usando a \textit{tag} \var{<input>} com o atributo \var{type} definido como ``file''. O exemplo \ref{codigo:file} mostra um campo de seleção de arquivo.
+
+\begin{htmlcode}{Exemplo de campo de seleção de arquivo.}{codigo:file}
+<label for="arquivo">Selecione um arquivo:</label>
+<input type="file" id="arquivo" name="arquivo"><br><br>
+\end{htmlcode}
+
+No exemplo acima, o usuário pode clicar no botão ``Procurar'' para selecionar um arquivo no seu computador. Quando o usuário envia o formulário, o arquivo selecionado é enviado para o servidor junto com os outros dados do formulário.
+
+\subsection{Campo Oculto}
+
+O tipo de campo \var{hidden} é usado para enviar informações ocultas do formulário para o servidor. Esse tipo de campo é útil para enviar informações que não precisam ser exibidas ao usuário, como por exemplo, informações de identificação. O código \ref{codigo:hidden} a seguir mostra um exemplo de como criar um campo oculto.
+
+\begin{htmlcode}{Exemplo de campo oculto.}{codigo:hidden}
+<form action="processarForm.php" method="post">
+   <label for="nome">Nome:</label>
+   <input type="text" id="nome" name="nome"><br><br>
+   <input type="hidden" id="usuarioId" name="usuarioId" value="12345">
+   <input type="submit" value="Enviar">
+</form>
+\end{htmlcode}
+
+No exemplo acima, temos um campo oculto com o nome \var{usuarioId} e valor \var{12345}. Esse valor é enviado junto com o formulário, mas não é exibido para o usuário. O campo oculto pode ser acessado e processado no lado do servidor pelo nome \var{usuarioId}.
+
+\subsection{Imagem}
+
+O tipo de campo \var{image} é usado para criar botões com imagens clicáveis dentro de um formulário. O código \ref{codigo:image} a seguir mostra um exemplo de como criar um botão de imagem.
+
+\begin{htmlcode}{Exemplo de botão de imagem.}{codigo:image}
+<form action="processarForm.php" method="post">
+   <label for="nome">Nome:</label>
+   <input type="text" id="nome" name="nome"><br><br>
+   <input type="image" src="botao.png" alt="Enviar">
+</form>
+\end{htmlcode}
+
+No exemplo acima, temos um botão de imagem com a imagem \var{botao.png} e o texto alternativo \var{Enviar}. Quando o usuário clica na imagem, o formulário é enviado para o servidor.
+
+\subsection{Mês}
+
+O tipo de campo \var{month} é usado para permitir que o usuário selecione um mês e um ano em um campo de entrada. O código \ref{codigo:month} a seguir mostra um exemplo de como criar um campo de entrada de mês.
+
+\begin{htmlcode}{Exemplo de campo de entrada de mês.}{codigo:month}
+<form action="processarForm.php" method="post">
+   <label for="data">Selecione um mês:</label>
+   <input type="month" id="data" name="data"><br><br>
+   <input type="submit" value="Enviar">
+</form>
+\end{htmlcode}
+
+No exemplo acima, temos um campo de entrada de mês com o nome \var{data}. Quando o usuário seleciona um mês e um ano, essas informações são enviadas para o servidor.
+
+\subsection{Número}
+
+O campo \var{<input>} com o atributo \var{type} definido como \var{"number"} permite que o usuário insira um número. O navegador exibe uma interface específica para entrada de números que inclui controles de aumento e diminuição. O valor inserido é validado automaticamente pelo navegador para garantir que seja um número. É possível definir os valores máximo e mínimo permitidos pelo campo usando os atributos \var{max} e \var{min}, respectivamente. Além disso, o atributo \var{step} pode ser usado para definir o incremento ou decremento entre os valores permitidos. O exemplo \ref{codigo:number} apresenta um código HTML para um campo de entrada de número.
+
+\begin{htmlcode}{Exemplo de campo de entrada de número.}{codigo:number}
+<label for="idade">Idade:</label>
+<input type="number" id="idade" name="idade" min="18" max="100" step="1">
+\end{htmlcode}
+
+Nesse exemplo, o campo de entrada \var{<input>} com o atributo \var{type} definido como \var{"number"} é usado para permitir a entrada da idade do usuário. O valor mínimo permitido é definido como 18 pelo atributo \var{min}, enquanto o valor máximo permitido é definido como 100 pelo atributo \var{max}. O atributo \var{step} define o incremento/decremento entre os valores permitidos, neste caso, 1.
+
+\subsection{Intervalo}
+
+O campo \var{<input>} com o atributo \var{type} definido como \var{"range"} permite que o usuário selecione um valor em um intervalo de valores predefinidos. O navegador exibe uma interface específica para seleção do valor, que pode ser uma barra deslizante, uma caixa de seleção ou outros controles, dependendo do navegador e do sistema operacional. O valor selecionado é retornado como um número. É possível definir os valores mínimo e máximo permitidos pelo campo usando os atributos \var{min} e \var{max}, respectivamente. Além disso, o atributo \var{step} pode ser usado para definir o incremento ou decremento entre os valores permitidos. O exemplo \ref{codigo:range} apresenta um código HTML para um campo de entrada de intervalo.
+
+\begin{htmlcode}{Exemplo de campo de entrada de intervalo.}{codigo:range}
+<label for="nota">Nota:</label>
+<input type="range" id="nota" name="nota" min="0" max="10" step="0.1">
+\end{htmlcode}
+
+Nesse exemplo, o campo de entrada \var{<input>} com o atributo \var{type} definido como \var{"range"} é usado para permitir a seleção da nota de um usuário. O valor mínimo permitido é definido como 0 pelo atributo \var{min}, enquanto o valor máximo permitido é definido como 10 pelo atributo \var{max}. O atributo \var{step} define o incremento/decremento entre os valores permitidos, neste caso, 0.1.
+
+\subsection{Botão de Redefinição}
+
+O botão de redefinição é um tipo de botão que permite que o usuário redefina os valores de todos os campos do formulário para seus valores iniciais. Quando o usuário clica em um botão de redefinição, todos os valores inseridos em campos do formulário são apagados e retornam para seus valores padrão. O código \ref{codigo:reset} a seguir mostra um exemplo de código para um botão de redefinição.
+
+\begin{htmlcode}{Exemplo de botão de redefinição.}{codigo:reset}
+<form action="processarForm.php" method="post">
+   <label for="nome">Nome:</label>
+   <input type="text" id="nome" name="nome"><br><br>
+   <label for="email">E-mail:</label>
+   <input type="email" id="email" name="email"><br><br>
+   <input type="reset" value="Limpar">
+   <input type="submit" value="Enviar">
+</form>
+\end{htmlcode}
+
+No exemplo acima, temos um formulário que contém um botão de redefinição e um botão de envio. Quando o usuário clica no botão de redefinição, todos os campos do formulário são limpos e retornam aos seus valores padrão. O botão de redefinição é criado usando o tipo de campo \var{reset}, como mostrado na linha 6 do código.
+
+\subsection{Busca}
+
+O campo de busca é um tipo de campo de entrada de texto que permite que o usuário insira termos de pesquisa para buscar informações em um site ou aplicativo. Quando o usuário digita um termo de pesquisa e pressiona Enter, a busca é processada no servidor e página é atualizada para exibir os resultados da pesquisa. O código \ref{codigo:search} a seguir mostra um exemplo de código para um campo de busca.
+
+\begin{htmlcode}{Exemplo de campo de busca.}{codigo:search}
+<form>
+   <label for="busca">Buscar:</label>
+   <input type="search" id="busca" name="busca">
+   <input type="submit" value="Buscar">
+</form>
+\end{htmlcode}
+
+No exemplo acima, temos um campo de busca que permite que o usuário digite um termo de pesquisa e clique no botão "Buscar" para iniciar a busca. O campo de busca é criado usando o tipo de campo \var{search}, como mostrado na linha 3 do código.
+
+\subsection{Telefone}
+
+O campo de telefone é um tipo de campo de entrada de texto que permite que o usuário insira um número de telefone. Quando o usuário clica em um campo de telefone em um dispositivo móvel, o teclado exibe automaticamente as teclas numéricas para facilitar a entrada do número de telefone. O código \ref{codigo:tel} a seguir mostra um exemplo de código para um campo de telefone.
+
+\begin{htmlcode}{Exemplo de campo de telefone.}{codigo:tel}
+<form>
+   <label for="telefone">Telefone:</label>
+   <input type="tel" id="telefone" name="telefone">
+</form>
+\end{htmlcode}
+
+No exemplo acima, temos um campo de telefone que permite que o usuário insira um número de telefone. O campo de telefone é criado usando o tipo de campo \var{tel}, como mostrado na linha 3 do código.
+
+\subsection{Horário}
+
+O campo de entrada do tipo \var{time} permite ao usuário selecionar um horário. Esse campo é representado por uma caixa de seleção que permite selecionar horas, minutos e segundos. O exemplo \ref{codigo:time} mostra como criar um campo de entrada do tipo \var{time}.
+
+\begin{htmlcode}{Exemplo de campo de entrada do tipo \var{time}.}{codigo:time}
+<label for="horario">Horário:</label>
+<input type="time" id="horario" name="horario">
+\end{htmlcode}
+
+O atributo \var{id} do \var{<input>} deve ser definido e o atributo \var{name} é opcional. O valor do campo é enviado como uma \textit{string} no formato ``hh:mm:ss'', onde ``hh'' representa as horas (00 a 23), ``mm'' representa os minutos (00 a 59) e ``ss'' representa os segundos (00 a 59). Se o usuário não selecionar um valor para os segundos, o valor padrão será ``00''. Se o usuário não selecionar um valor para as horas ou minutos, o valor padrão será ``00''.
+
+\subsection{URL}
+
+O campo de entrada do tipo \var{url} permite ao usuário inserir uma URL válida. Esse campo é semelhante ao campo de entrada do tipo \var{text}, mas com a validação adicional para garantir que a entrada seja uma URL com sintaxe válida. O exemplo \ref{codigo:url} mostra como criar um campo de entrada do tipo \var{url}.
+
+\begin{htmlcode}{Exemplo de campo de entrada do tipo \var{url}.}{codigo:url}
+<label for="site">Site:</label>
+<input type="url" id="site" name="site">
+\end{htmlcode}
+
+O valor do campo de entrada deve ser uma URL válida. Se o usuário inserir uma URL inválida, o navegador pode exibir uma mensagem de erro.
+
+\subsection{Semana}
+
+O campo de entrada de semana permite que o usuário selecione uma semana e é representado visualmente como um controle com um calendário. O atributo \var{type} é definido como \var{week} para criar um campo de entrada de semana. O valor do campo é uma sequência no formato ``AAAA-Sx'', onde ``AAAA'' é o ano e ``x'' é o número da semana. O código \ref{codigo:semana} mostra um exemplo a seguir mostra como criar um campo de entrada de semana.
+
+\begin{htmlcode}{Exemplo de campo de entrada de semana.}{codigo:semana}
+<label for="semana">Selecione uma semana:</label>
+<input type="week" id="semana" name="semana">
+\end{htmlcode}
+
+O código \ref{codigo:semana} a seguir mostra um exemplo de código para um campo de entrada de semana.
+
+\section{Exercícios Propostos}
+
+Essa série de exercícios envolve os conceitos abordados neste capítulo e também \textbf{pode demandar alguma pesquisa}. Reserve um tempo e um local adequados para fazer os exercícios sem distrações. Assim você absorverá muito mais o conteúdo estudado.
+
+\begin{exercise}
+Crie um formulário HTML com um campo de texto para o atributo nome e um botão de envio. Utilize o atributo \var{action} do elemento \var{<form>} para enviar o formulário para uma página PHP ou outro script do lado do servidor.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo de texto para o atributo e-mail e um campo de senha para a senha do usuário. Adicione um botão de envio e utilize o atributo \var{method} do elemento \var{<form>} para definir o método HTTP como POST.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com uma caixa de seleção para escolher uma cor (vermelho, verde ou azul) e um botão de envio.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo de texto para receber a idade do usuário e um campo de seleção para escolher o gênero (masculino, feminino ou outro). Adicione um botão de envio e utilize o atributo \var{required} do elemento \var{<input>} para tornar os campos obrigatórios.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo de texto para o endereço de e-mail e um campo de seleção para escolher um assunto (dúvida, sugestão ou reclamação). Adicione um campo de texto longo para a mensagem e um botão de envio. Utilize o atributo \var{mailto} do elemento \var{<form>} para enviar o formulário por e-mail.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo de texto para a busca de um termo no Google e um botão de envio. Utilize o atributo \var{action} do elemento \var{<form>} para enviar o formulário para o mecanismo de busca do Google. Quando o formulário for enviado, exiba os resultados da busca em uma nova página.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com dois campos de seleção para escolher o dia e o mês de nascimento do usuário. Adicione um botão de envio e utilize o atributo \var{method} do elemento \var{<form>} para definir o método HTTP como GET.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com uma caixa de seleção para escolher um país e um campo de texto para inserir o endereço. Utilize o elemento \var{<textarea>} para o campo de texto e o atributo \var{required} do elemento \var{<select>} para tornar a escolha do país obrigatória. Adicione um botão de envio e utilize o atributo \var{method} do elemento \var{<form>} para definir o método HTTP como POST.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com dois campos de seleção de horário para escolher o horário de início e de término de uma reserva em um hotel. Adicione um campo de texto para inserir o nome do hóspede e um botão de envio. Utilize o atributo \var{method} do elemento \var{<form>} para definir o método HTTP como POST e o atributo \var{action} para enviar o formulário para um script PHP que irá processar este formulário.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{date} para inserir uma data de nascimento. Adicione um botão de envio e utilize o atributo \var{required} do elemento \var{<input>} para tornar o campo obrigatório.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{datetime-local} para inserir a data e hora de um evento. Adicione um botão de envio e utilize o atributo \var{min} do elemento \var{<input>} para definir a data mínima como a data atual.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{time} para inserir o horário de um compromisso. Adicione um botão de envio e utilize o atributo \var{step} do elemento \var{<input>} para definir incrementos de 15 minutos no horário.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{range} para selecionar um número entre 1 e 10. Adicione um botão de envio e utilize o atributo \var{value} do elemento \var{<input>} para definir o valor inicial como 5.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{color} para selecionar uma cor. Adicione um botão de envio e utilize o atributo \var{required} do elemento \var{<input>} para tornar o campo obrigatório.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{week} para selecionar uma semana do ano. Adicione um botão de envio e utilize o atributo \var{required} do elemento \var{<input>} para tornar o campo obrigatório.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{month} para selecionar um mês do ano. Adicione um botão de envio e utilize o atributo \var{required} do elemento \var{<input>} para tornar o campo obrigatório.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{url} para inserir uma URL. Adicione um botão de envio e utilize o atributo \var{required} do elemento \var{<input>} para tornar o campo obrigatório.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{search} para inserir um termo de busca. Adicione um botão de envio e utilize o atributo \var{placeholder} do elemento \var{<input>} para mostrar um texto de exemplo dentro do campo.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo receber um e-mail e um \var{input} do tipo \var{image} para permitir que o usuário clique em uma imagem para enviar o formulário. Utilize o atributo \var{src} do elemento para definir a imagem do botão.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{number} para inserir um número entre 1 e 100. Adicione um botão de envio e utilize o atributo \var{required} do elemento \var{<input>} para tornar o campo obrigatório. 
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo para inserir um endereço de e-mail. Adicione um botão de envio e utilize o atributo \var{type} do elemento \var{<input>} definido como ``email'' para aplicar a validação de e-mail.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{password} para inserir uma senha. Adicione um botão de envio e utilize o atributo \var{minlength} do elemento \var{<input>} para definir um tamanho mínimo de 8 caracteres.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{number} para inserir a idade do usuário. Adicione um botão de envio e utilize o atributo \var{min} do elemento \var{<input>} para definir a idade mínima como 18 anos e a máxima como 120 anos.
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{url} para inserir uma URL. Adicione um botão de envio e utilize o atributo \var{pattern} do elemento \var{<input>} para definir um padrão que permita somente URLs que comecem com "https://" ou "http://".
+\end{exercise}
+
+\begin{exercise}
+Crie um formulário HTML com um campo do tipo \var{tel} para inserir um número de telefone. Adicione um botão de envio e utilize o atributo \var{pattern} do elemento \var{<input>} para definir um padrão que permita somente números de telefone no formato "(xx) xxxx-xxxx" ou "(xx) xxxxx-xxxx".
+\end{exercise}
+
+\section{Considerações Sobre o Capítulo}
+
+Neste capítulo, discutimos como criar formulários em HTML e como usar diferentes tipos de campos de formulários. Vimos como os atributos HTML podem ser usados para validar dados de formulários. É importante lembrar que a validação de formulários é uma parte crucial da criação de formulários para garantir que os usuários insiram dados válidos e precisos. Concluindo, lembre-se de que, ao criar formulários em HTML, é importante manter o design do formulário simples e fácil de entender para os usuários. Os rótulos devem ser claros e informativos, e os campos devem ser organizados de forma lógica. Além disso, os formulários devem ser testados em vários navegadores e dispositivos para garantir que funcionem corretamente para todos os usuários.

@@ -1,0 +1,187 @@
+% Template de Apostila do Campus Cachoeiro do Instituto Federal do Espírito Santo
+% Autor: Prof. Ricardo Maroquio
+% Baseado no Template "The Legrand Orange Book" Version 3.1 (February 18, 2022)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	11pt, % Default font size, select one of 10pt, 11pt or 12pt
+	fleqn, % Left align equations
+	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
+        twoside,
+	%oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
+]{ifescai}
+
+% Book information for PDF metadata, remove/comment this block if not required 
+\hypersetup{
+	pdftitle={Apostila de Desenvolvimento Web}, % Title field
+	pdfauthor={Prof. Dr. Ricardo Maroquio}, % Author field
+	pdfsubject={Programação de Computadores}, % Subject field
+	pdfkeywords={html, css, bootstrap}, % Keywords
+	pdfcreator={LaTeX}, % Content creator field
+}
+
+\setminted[html]
+{frame=leftline,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=white,
+fontsize=\small,
+linenos}
+
+\addbibresource{sample.bib} % Bibliography file
+
+\definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
+\definecolor{darkgreen}{RGB}{0,64,0}
+
+\chapterimage{chapter_bg.pdf} % Chapter heading image
+\chapterspaceabove{5.71cm} % Default whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{5cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\counterwithin{listing}{chapter} % faz a numeração dos algoritmos reiniciar a cada capítulo
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\titlepage % Output the title page
+	{\includegraphics[width=\paperwidth]{cover_bg2.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image        
+	{ % Title(s) and author(s)
+		\centering\sffamily % Font styling
+		{\Huge\bfseries Desenvolvimento Web\par} % Book title
+		\vspace{4pt} % Vertical whitespace
+		{\LARGE Bacharelado em Sistemas de Informação\par} % Subtitle
+		\vspace{24pt} % Vertical whitespace
+		{\huge\bfseries Prof. Ricardo Maroquio\par} % Author name
+	}
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+\sffamily
+\normalsize
+\setlength{\parskip}{12pt}
+\thispagestyle{empty} % Suppress headers and footers on this page
+
+~\vfill % Push the text down to the bottom of the page
+
+\noindent Copyright \copyright\ 2023 Ricardo Maroquio\\ % Copyright notice
+
+\noindent \textsc{Instituto Federal do Espírito Santo}\\ % Publisher
+\noindent \textsc{Campus Cachoeiro}\\ % Publisher
+
+
+\noindent Disponível para download em:\\
+\noindent \textsc{\href{https://www.maroquio.com/}{http://maroquio.com}}\\ % URL
+\begin{spacing}{1.5}
+\noindent Esta apostila está sob a licença \textit{Creative Commons Attribution-NonCommercial 4.0}. Você só pode usar esse material se concordar com essa licença. Você pode acessar a licença em \url{https://creativecommons.org/licenses/by-nc-sa/4.0}. A menos que seja aplicável por lei ou acordado por escrito, material digital sob esta licença deve deve ser distribuído \textsc{``como está'', sem garantias ou condições de nenhum tipo}. Para maiores informações sobre o uso deste material, consulte a licença disponível no link supracitado.\\
+
+\noindent \textit{Fevereiro de 2023} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+\renewcommand*\contentsname{Sumário}
+
+\renewcommand{\listfigurename}{Lista de Figuras}
+
+\renewcommand{\listtablename}{Lista de Tabelas}
+
+\renewcommand{\listoflistingscaption}{Lista de Exemplos de Código}
+
+\renewcommand{\listingscaption}{Exemplo de Código}
+
+\setcounter{tocdepth}{1}
+
+%https://latex-tutorial.com/caption-customization-latex/
+\captionsetup{singlelinecheck=false, font={sf}, labelfont=bf, justification=raggedright, size=small}
+
+\captionsetup[listing]{singlelinecheck=false, font={sf}, labelfont=bf, justification=raggedright, size=small}
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+
+\tableofcontents % Output the table of contents
+
+\listoffigures % Output the list of figures, comment or remove this command if not required
+
+%\listoftables % Output the list of tables, comment or remove this command if not required
+
+\listoflistings % Output the list of code examples, comment or remove this command if not required
+
+\pagestyle{fancy} % Enable default headers and footers again
+
+\cleardoublepage % Start the following content on a new page
+
+%----------------------------------------------------------------------------------------
+
+\part{Parte I: HTML}
+
+\include{chapter01.tex}
+\include{chapter02.tex}
+\include{chapter03.tex}
+\include{chapter04.tex}
+\include{chapter05.tex}
+\include{chapter06.tex}
+\include{chapter07.tex}
+%\include{chapter09.tex}
+%\include{chapter10.tex}
+
+%----------------------------------------------------------------------------------------
+
+\part{Parte II: CSS}
+\include{chapter08.tex}
+
+%\include{chapter11.tex}
+
+%----------------------------------------------------------------------------------------
+
+\stopcontents[part] % Manually stop the 'part' table of contents here so the previous Part page table of contents doesn't list the following chapters
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\include{bibliography.tex}
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+%\include{index.tex}
+
+%----------------------------------------------------------------------------------------
+%	APPENDICES
+%----------------------------------------------------------------------------------------
+
+% \chapterimage{chapter_bg.pdf} % Chapter heading image
+% \chapterspaceabove{5.71cm} % Whitespace from the top of the page to the chapter title on chapter pages
+% \chapterspacebelow{5cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+% \begin{appendices}
+
+% \renewcommand{\chaptername}{Appendix} % Change the chapter name to Appendix, i.e. "Appendix A: Title", instead of "Chapter A: Title" in the headers
+
+%------------------------------------------------
+
+%\include{appendix01.tex}
+
+%------------------------------------------------
+
+%\include{appendix02.tex}
+
+%------------------------------------------------
+
+%\end{appendices}
+
+%----------------------------------------------------------------------------------------
+\end{spacing}
+\end{document}

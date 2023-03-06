@@ -1,0 +1,17 @@
+\chapterimage{} % Chapter heading image
+\chapterspaceabove{2.5cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{2cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+\chapter*{Bibliografia}
+\markboth{\sffamily\normalsize\bfseries Bibliografia}{\sffamily\normalsize\bfseries Bibliografia} % Set the page headers to display a Bibliography chapter name
+\addcontentsline{toc}{chapter}{\textcolor{darkgreen}{Bibliografia}} % Add a Bibliography heading to the table of contents
+
+\section*{Artigos}
+\addcontentsline{toc}{section}{Artigos} % Add the Articles subheading to the table of contents
+
+\printbibliography[heading=bibempty, type=article] % Output article bibliography entries
+
+\section*{Livros}
+\addcontentsline{toc}{section}{Livros} % Add the Books subheading to the table of contents
+
+\printbibliography[heading=bibempty, type=book] % Output book bibliography entries

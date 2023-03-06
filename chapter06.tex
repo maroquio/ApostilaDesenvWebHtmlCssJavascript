@@ -1,0 +1,396 @@
+\chapter{Áudio e Vídeo}
+
+A incorporação de elementos de áudio e vídeo em uma página web pode ser uma ótima maneira de melhorar a experiência do usuário e tornar o conteúdo mais interessante e interativo. O HTML, a partir da versão 5, oferece elementos específicos para inserir áudio e vídeo em uma página web, permitindo que os desenvolvedores personalizem a apresentação e a interação com conteúdo multimídia.
+
+Ao inserir áudio em uma página HTML, o desenvolvedor pode escolher entre vários formatos de arquivo, cada um com suas próprias vantagens e desvantagens. Além disso, a HTML oferece vários \textbf{atributos} que permitem personalizar a apresentação e a interação com o áudio, como \var{controls} para adicionar controles de reprodução padrão, \var{autoplay} para iniciar a reprodução automaticamente e \var{muted} para silenciar o áudio.
+
+Da mesma forma, ao inserir vídeo em uma página HTML, é possível personalizar a apresentação e a interação com o conteúdo multimídia. O HTML também oferece vários atributos que permitem personalizar a reprodução do vídeo, como \var{controls} para adicionar controles de reprodução padrão, \var{autoplay} para iniciar a reprodução automaticamente e \var{loop} para repetir a reprodução. Além disso, é possível incorporar vídeos do YouTube em uma página HTML usando um \textit{iframe} e personalizar a reprodução com parâmetros de URL.
+
+Em resumo, este capítulo aborda tudo o que você precisa saber para incorporar elementos de áudio e vídeo em uma página web, desde a inserção de arquivos de áudio e vídeo com o elemento \var{<source>} até a personalização da reprodução com diferentes atributos e parâmetros de URL.
+
+\section{Inserindo Áudio em Uma Página HTML}
+
+A inclusão de áudio em uma página HTML é muito parecida com a inclusão de imagens ou vídeos. O HTML oferece o elemento \var{<audio>}, que permite inserir arquivos de áudio em uma página web.
+
+\subsection{Uso do Elemento \var{<audio>}}
+
+O elemento \var{<audio>} é um contêiner que define o áudio a ser incluído em uma página HTML. O código \ref{code:audio} mostra o HTML básico para incluir um arquivo de áudio em uma página.
+
+\begin{htmlcode}{Inserindo um elemento de áudio.}{code:audio}
+<audio src="caminho/do/arquivo.mp3"></audio>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:audio}, o atributo \var{src} aponta para o arquivo de áudio a ser incluído na página. Note que, assim como no elemento \var{<img>} para imagens, não é necessário fechar a \textit{tag} do elemento \var{<audio>} (ou seja, o código acima é suficiente para incluir o áudio na página).
+
+\subsection{Inserindo Arquivos de Áudio em Diferentes Formatos}
+
+Para garantir a compatibilidade do arquivo de áudio com diferentes navegadores, é importante incluir diferentes formatos de arquivo usando o elemento \var{<source>}. O elemento \var{<source>} é usado para especificar diferentes versões do arquivo de áudio, cada uma em um formato diferente. O navegador irá escolher o formato suportado mais apropriado. O código \ref{code:audio_source} mostra o HTML necessário para incluir um arquivo de áudio com diferentes formatos em uma página.
+
+\begin{htmlcode}{Uso do elemento áudio com diferentes arquivos.}{code:audio_source}
+<audio controls>
+  <source src="caminho/do/arquivo.mp3" type="audio/mpeg">
+  <source src="caminho/do/arquivo.ogg" type="audio/ogg">
+  <source src="caminho/do/arquivo.wav" type="audio/wav">
+</audio>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:audio_source}, incluímos três versões do arquivo de áudio, cada uma em um formato diferente: MP3, Ogg e WAV. O navegador irá escolher a versão mais apropriada suportada pelo dispositivo em que a página está sendo visualizada.
+
+\subsection{Formatos de Arquivos Suportados Pelos Navegadores}
+
+É importante saber que nem todos os navegadores suportam todos os formatos de arquivo de áudio. Por exemplo, o Internet Explorer só suporta o formato MP3. Portanto, é recomendável incluir pelo menos a versão MP3 do arquivo de áudio para garantir a compatibilidade com esse navegador.
+
+Os formatos mais comuns de arquivo de áudio suportados pelos navegadores são MP3, Ogg e WAV. No entanto, outros formatos também podem ser suportados, dependendo do navegador e do sistema operacional em que a página está sendo visualizada. Vale ressaltar que o formato WAV não tem compactação, portanto, seu carregamento pode ser mais demorado que os demais formatos.
+
+\subsection{Atributos do Elemento \var{<audio>}}
+
+O elemento \var{<audio>} oferece vários atributos que permitem personalizar a reprodução do áudio na página. A seguir, alguns dos atributos mais comuns.
+
+\subsubsection{Atributo \var{controls}}
+
+O atributo \var{controls} adiciona os controles padrão de reprodução, como \textit{play}, \textit{pause}, \textit{volume} e progresso, ao elemento \var{<audio>}. O código \ref{code:audio_controls} mostra o HTML para adicionar os controles padrão de reprodução.
+
+\begin{htmlcode}{Uso do elemento áudio com atributo \var{controls}.}{code:audio_controls}
+<audio controls>
+  <source src="caminho/do/arquivo.mp3">
+</audio>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:audio_controls}, o atributo \var{controls} adiciona os controles padrão de reprodução ao elemento \var{<audio>}. Isso inclui botões de \textit{play}, \textit{pause}, \textit{volume} e progresso, que permitem ao usuário controlar a reprodução do áudio.
+
+\subsubsection{Atributo \var{autoplay}}
+
+O atributo \var{autoplay} inicia a reprodução do áudio automaticamente quando a página é carregada. Vale ressaltar que, por questões de privacidade, o navegador nem sempre aceita iniciar um áudio ao carregar uma página. Portanto, não se pode contar com o funcionamento pleno desse atributo. O código \ref{code:audio_autoplay} mostra o HTML para reproduzir automaticamente um arquivo de áudio.
+
+\begin{htmlcode}{Uso do elemento áudio com atributo \var{autoplay}.}{code:audio_autoplay}
+<audio autoplay>
+  <source src="caminho/do/arquivo.mp3">
+</audio>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:audio_autoplay}, o atributo \var{autoplay} inicia a reprodução do áudio assim que a página é carregada.
+
+\subsubsection{Atributo \var{loop}}
+
+O atributo \var{loop} permite que o áudio seja reproduzido continuamente, repetindo a reprodução quando ela termina. O código \ref{code:audio_loop} mostra o HTML para repetir a reprodução de um arquivo de áudio.
+
+\begin{htmlcode}{Uso do elemento áudio com atributos \var{controls} e \var{loop}.}{code:audio_loop}
+<audio controls loop>
+  <source src="caminho/do/arquivo.mp3">
+</audio>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:audio_loop}, o atributo \var{loop} permite que o áudio seja reproduzido continuamente, repetindo a reprodução quando ela termina.
+
+\subsubsection{Atributo \var{muted}}
+
+O atributo \var{muted} silencia o áudio do elemento \var{<audio>}. O código \ref{code:audio_muted} mostra o HTML para incluir um arquivo de áudio com o áudio silenciado.
+
+\begin{htmlcode}{Uso do elemento áudio com atributo \var{muted}.}{code:audio_muted}
+<audio controls muted>
+  <source src="caminho/do/arquivo.mp3">
+</audio>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:audio_muted}, o atributo \var{muted} silencia o áudio do elemento \var{<audio>}.
+
+\subsubsection{Atributo \var{preload}}
+
+O atributo \var{preload} especifica se o navegador deve pré-carregar o vídeo quando a página é carregada. O valor \var{none} indica que o navegador não deve pré-carregar o vídeo. O valor \var{metadata} indica que o navegador deve pré-carregar apenas os metadados do vídeo, como a duração, resolução e taxa de bits. O valor \var{auto} indica que o navegador deve pré-carregar o vídeo inteiro.
+
+O uso do atributo \var{preload} pode afetar o desempenho do site, já que o pré-carregamento de um vídeo grande pode atrasar o tempo de carregamento da página. É recomendado utilizar o valor \var{none} para vídeos grandes e o valor \var{auto} para vídeos curtos. O código \ref{codigo:preload} um exemplo de como utilizar o atributo \var{preload}.
+
+\begin{htmlcode}{Exemplo do atributo \var{preload}.}{codigo:preload}
+<video src="video.mp4" preload="none"></video>
+\end{htmlcode}
+
+Neste exemplo \ref{codigo:preload}, o valor \var{none} é utilizado para evitar o pré-carregamento do vídeo \var{video.mp4}.
+
+\section{Inserindo Vídeo em Uma Página HTML}
+
+É possível exibir vídeos em uma página HTML usando o elemento \var{<video>}. O HTML oferece várias maneiras de personalizar a apresentação e a interação com o vídeo. As subseções seguintes mostram como configurar a exibição de um vídeo em uma página web.
+
+\subsection{Uso do Elemento \var{<video>}}
+
+O elemento \var{<video>} é um contêiner que define o vídeo a ser incluído em uma página HTML. O código \ref{code:video} mostra o HTML básico para incluir um vídeo em uma página web.
+
+\begin{htmlcode}{Uso do elemento \var{video}.}{code:video}
+<video src="caminho/do/arquivo.mp4"></video>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:video}, o atributo \var{src} aponta para o arquivo de vídeo a ser incluído na página. Note que, assim como no elemento \var{<img>} para imagens e \var{<audio>} para áudio, não é necessário fechar a \textit{tag} do elemento \var{<video>}.
+
+\subsection{Inserindo Arquivos de Vídeo em Diferentes Formatos}
+
+Para vídeos, também é importante incluir diferentes formatos de arquivo usando o elemento \var{<source>} para garantir a compatibilidade do vídeo com diferentes navegadores. O elemento \var{<source>} é usado para especificar diferentes versões do arquivo de vídeo, cada uma em um formato de vídeo diferente. O navegador escolhe aquele formato que é mais apropriado para execução. Atualmente, o formato MP4 é nativamente suportado pelos navegadores mais populares. Você também pode definir um formato como padrão, como veremos mais adiante. O código \ref{code:video_source} mostra o HTML para incluir um arquivo de vídeo com diferentes formatos.
+
+\begin{htmlcode}{Uso do elemento \var{video} com diferentes arquivos.}{code:video_source}
+<video controls>
+  <source src="caminho/do/arquivo.mp4" type="video/mp4">
+  <source src="caminho/do/arquivo.webm" type="video/webm">
+  <source src="caminho/do/arquivo.ogv" type="video/ogg">
+</video>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:video_source}, incluímos três versões do arquivo de vídeo, cada uma em um formato diferente: MP4, WebM e Ogg. O navegador irá escolher a versão mais apropriada suportada pelo dispositivo em que a página está sendo visualizada.
+
+\subsection{Formatos de Arquivos Suportados Pelos Navegadores}
+
+Assim como com o elemento \var{<audio>}, nem todos os navegadores suportam todos os formatos de arquivo de vídeo. Os formatos mais comuns de arquivo de vídeo suportados pelos navegadores são MP4, WebM e Ogg. No entanto, outros formatos também podem ser suportados, dependendo do navegador e do sistema operacional em que a página está sendo visualizada.
+
+\subsection{Atributos do Elemento \var{video}}
+
+O elemento \var{<video>} oferece vários atributos que permitem personalizar a reprodução do vídeo na página. A seguir, alguns dos atributos mais comuns.
+
+\subsubsection{Atributo \var{controls}}
+
+O atributo \var{controls} adiciona os controles padrão de reprodução, como play, pause, volume e progresso, ao elemento \var{<video>}. O código \ref{code:video_controls} mostra o HTML para adicionar os controles padrão de reprodução.
+
+\begin{htmlcode}{Uso do elemento \var{video} com atributo \var{controls}.}{code:video_controls}
+<video controls>
+  <source src="caminho/do/arquivo.mp4">
+</video>
+\end{htmlcode}
+
+Nesse exemplo, o atributo \var{controls} adiciona os controles padrão de reprodução ao elemento \var{<video>}. Isso inclui botões de \textit{play}, \textit{pause}, \textit{volume} e progresso, que permitem ao usuário controlar a reprodução do vídeo.
+
+\subsubsection{Atributo \var{muted}}
+
+O atributo \var{muted} silencia o áudio do elemento \var{<video>}. O código \ref{code:video_muted} mostra o HTML para incluir um arquivo de vídeo com o áudio silenciado.
+
+\begin{htmlcode}{Uso do elemento \var{video} com o atributo \var{muted}.}{code:video_muted}
+<video controls muted>
+  <source src="caminho/do/arquivo.mp4">
+</video>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:video_muted}, o atributo \var{muted} silencia o áudio do elemento \var{<video>}.
+
+\subsubsection{Atributo \var{autoplay}}
+
+O atributo \var{autoplay} inicia a reprodução do vídeo automaticamente quando a página é carregada. Vale ressaltar que, se o áudio do vídeo não estiver mutado, por questões de privacidade, este atributo nem sempre vai funcionar. O código \ref{code:video_autoplay} mostra o HTML para reproduzir automaticamente um arquivo de vídeo.
+
+\begin{htmlcode}{Uso do elemento \var{video} com o atributo \var{autoplay}.}{code:video_autoplay}
+<video autoplay muted>
+  <source src="caminho/do/arquivo.mp4">
+</video>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:video_autoplay}, o atributo \var{autoplay} inicia a reprodução do vídeo assim que a página é carregada.
+
+\subsubsection{Atributo \var{loop}}
+
+O atributo \var{loop} permite que o vídeo seja reproduzido continuamente, repetindo a reprodução quando ela termina. O código \ref{code:video_loop} mostra o HTML para repetir a reprodução de um vídeo.
+
+\begin{htmlcode}{Uso do elemento \var{video} com o atributo \var{loop}.}{code:video_loop}
+<video controls loop>
+  <source src="caminho/do/arquivo.mp4">
+</video>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:video_loop}, o atributo \var{loop} permite que o vídeo seja reproduzido continuamente, repetindo a reprodução quando ela termina.
+
+\subsubsection{Atributo \var{poster}}
+
+O atributo \var{poster} especifica uma imagem de visualização para o vídeo antes de ele ser reproduzido. O código \ref{code:video_poster} mostra o HTML para adicionar uma imagem de visualização.
+
+\begin{htmlcode}{Uso do elemento \var{video} com o atributo \var{poster}.}{code:video_poster}
+<video controls poster="caminho/do/imagem.jpg">
+  <source src="caminho/do/arquivo.mp4">
+</video>
+\end{htmlcode}
+
+Nesse exemplo, o atributo \var{poster} especifica o caminho para a imagem de visualização. Quando o usuário clica no botão de \textit{play}, a imagem de visualização é substituída pelo vídeo.
+
+\begin{htmlcode}{Uso do elemento \var{video} com todos os atributos.}{code:video_attr}
+<video controls autoplay loop muted poster="exemplo.jpg">
+  <source src="exemplo.mp4" type="video/mp4">
+</video>
+\end{htmlcode}
+
+Neste exemplo \ref{code:video_attr}, adicionamos os atributos \var{controls}, \var{autoplay}, \var{loop}, \var{muted} e \var{poster} ao elemento \var{<video>}. Além disso, definimos um arquivo de vídeo em formato MP4.
+
+\subsection{Adicionando Legendas aos Vídeos}
+
+As legendas são uma ótima forma de tornar seu vídeo mais acessível para pessoas com deficiência auditiva, além de ajudar a compreender melhor o conteúdo do vídeo para aqueles que têm dificuldades com o idioma falado. O elemento HTML \var{<video>} possui suporte nativo para legendas, e o processo de adicioná-las é bem simples.
+
+O formato VTT (WebVTT) é um formato de legenda de vídeo baseado em texto que é suportado pelos navegadores modernos. O VTT é um formato simples e fácil de usar, que permite adicionar legendas a um vídeo em um arquivo separado, o que é ideal para garantir que o conteúdo do vídeo seja acessível a um público mais amplo.
+
+O formato VTT suporta uma ampla gama de recursos, como a exibição de várias linhas de texto ao mesmo tempo, exibição de legendas em diferentes cores e tamanhos de fonte, sincronização precisa com o áudio do vídeo e exibição de marcações de tempo para cenas específicas do vídeo. O código \ref{code:video_track} mostra um exemplo de como adicionar legendas VTT a um elemento de vídeo.
+
+\begin{htmlcode}{Adicionando legenda a um vídeo com o elemento \var{track}.}{code:video_track}
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    <track label="Português" kind="subtitles" srclang="pt-br" 
+        src="legenda.pt-br.vtt" default>
+    <track label="English" kind="subtitles" srclang="en-us" 
+        src="legenda.en-us.vtt">
+</video>
+\end{htmlcode}
+
+Nesse exemplo \ref{code:video_track}, estamos adicionando um arquivo de legenda em VTT ao nosso elemento de vídeo usando a \textit{tag} \var{<track>}. O atributo \var{label} é usado para definir o rótulo da legenda exibido no menu de seleção de legendas do player de vídeo. O atributo \var{srclang} é usado para especificar o idioma da legenda e o atributo \var{kind} define o tipo de legenda, no caso, \var{subtitles}.
+
+O atributo \var{src} aponta para o arquivo de legenda em VTT. Note que o atributo \var{default} é usado para definir uma legenda como padrão, caso haja mais de uma legenda e nenhuma outra legenda seja selecionada. Dessa forma, é possível adicionar legendas VTT aos seus vídeos em HTML e torná-los mais acessíveis a um público mais amplo.
+
+\subsubsection{O Arquivo de Legenda VTT}
+
+O formato de legendas VTT é suportado pelos principais navegadores web e é fácil de ser implementado em páginas HTML. Além disso, o VTT oferece diversas opções de configuração, permitindo que sejam definidas fontes, tamanhos, cores e posicionamento das legendas, aprimorando a experiência do usuário com o conteúdo multimídia. O código \ref{code:video_vtt} mostra um trecho de um arquivo VTT. A listagem em seguida mostra uma explicação sobre cada um dos elementos que compõem o trecho do arquivo de legenda VTT deste exemplo de código.
+
+\begin{htmlcode}{Exemplo de um arquivo de legenda VTT.}{code:video_vtt}
+WEBVTT
+
+STYLE
+::cue {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  color: white;
+  background-color: black;
+}
+
+00:00:05.000 --> 00:00:08.000
+Bem-vindo ao curso de HTML5 e CSS3!
+
+00:00:10.000 --> 00:00:13.000
+Neste curso, você vai aprender a criar páginas web
+
+00:00:14.000 --> 00:00:17.000
+com as tecnologias mais modernas da atualidade.
+
+00:00:20.000 --> 00:00:24.000
+Não é necessário ter conhecimento prévio em programação.
+
+00:00:25.000 --> 00:00:29.000
+Você também poderá usar editores na nuvem.
+
+00:00:30.000 --> 00:00:34.000
+Então, vamos começar!
+\end{htmlcode}
+
+\begin{itemize}
+    \item \textbf{WEBVTT}: esta é a linha de identificação do arquivo de legenda VTT. Ele é usado para indicar que o arquivo é um arquivo de legenda no formato WebVTT.
+    \item \textbf{00:00:05.000 --> 00:00:08.000}: este é um marcador de tempo que indica quando a legenda deve aparecer e desaparecer. O primeiro marcador de tempo indica quando a legenda deve começar a ser exibida e o segundo indica quando ela deve ser removida. O formato é ``hora:minuto:segundo.milissegundo".
+    \item \textbf{Bem-vindo ao curso de HTML5 e CSS3!}: este é o texto da legenda que será exibido.
+    \item As linhas seguintes seguem o mesmo formato, com marcadores de tempo e texto das legendas correspondentes.
+\end{itemize}
+
+O bloco de código logo abaixo da palavra \textbf{STYLE} corresponde a um seletor CSS para configurar a fonte, cor e outras propriedades da legenda no arquivo VTT. Nesse caso, a fonte está definida como \var{Arial} ou uma fonte \var{sans-serif} caso \var{Arial} não esteja disponível, o tamanho da fonte é 1.2em, a cor do texto é branca e o fundo da legenda é preto.
+
+As propriedades de estilo que podem ser definidas no arquivo VTT incluem \var{font-family}, \var{font-style}, \var{font-weight}, \var{font-size}, \var{color}, \var{background-color}, \var{text-align}, \var{direction}, \var{writing-mode} e outras. É importante ressaltar que nem todos os navegadores suportam todas as propriedades de estilo. Vale ressaltar também que esse é um trecho de código opcional. 
+
+Concluindo, os arquivos de legenda VTT podem ser criados com qualquer editor de texto, como o Bloco de Notas do Windows ou o TextEdit do Mac. Basta salvar o arquivo com a extensão ``.vtt'' e incluir o arquivo no elemento \var{<track>} do vídeo HTML.
+
+\section{Incorporando Vídeos do YouTube em Uma Página HTML}
+
+O YouTube é uma das maiores plataformas de compartilhamento de vídeo do mundo. É possível incorporar vídeos do YouTube em uma página HTML usando um \textit{iframe}. Além disso, o YouTube oferece parâmetros de URL para personalizar a reprodução do vídeo incorporado, incluindo o tempo de início do vídeo, a opção de iniciar o vídeo automaticamente, entre outras. As subseções a seguir mostram como incorporar vídeos do YouTube em uma página HTML.
+
+\subsection{Usando \textit{iframe} para Incorporar Vídeo do YouTube}
+
+O YouTube oferece um código de incorporação que pode ser copiado e colado em uma página HTML para exibir o vídeo desejado. O código \ref{code:youtube} mostra HTML e usa um \textit{iframe} para incorporar um vídeo do YouTube.
+
+\begin{htmlcode}{Incorporando vídeo do YouTube.}{code:youtube}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID"
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+  picture-in-picture" allowfullscreen></iframe>
+\end{htmlcode}
+
+Nesse exemplo, substitua \var{VIDEO\_ID} pelo ID do vídeo do YouTube que você deseja incorporar. O atributo \var{width} define a largura do vídeo, e o atributo \var{height} define a altura. Os outros atributos são usados para permitir que o vídeo seja reproduzido automaticamente e em tela cheia.
+
+\subsection{Personalizando a Reprodução de Vídeo do YouTube com Parâmetros de URL}
+
+O YouTube oferece parâmetros de URL para personalizar a reprodução do vídeo incorporado. Esses parâmetros são adicionados ao final da URL do vídeo e são separados por \var{\&}. Os parâmetros mais comuns incluem \var{controls}, \var{autoplay}, \var{mute} e \var{loop}. O código \ref{code:youtube_params} mostra o HTML para incorporar um vídeo do YouTube com parâmetros de URL.
+
+\begin{htmlcode}{Incorporando vídeo do YouTube com parâmetros.}{code:youtube_params}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?
+  controls=0&autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; 
+  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+\end{htmlcode}
+
+Nesse exemplo, substitua \var{VIDEO\_ID} pelo ID do vídeo do YouTube que você deseja incorporar. Os parâmetros de URL personalizam a reprodução do vídeo, removendo os controles padrão, iniciando a reprodução automaticamente, silenciando o áudio e repetindo a reprodução.
+
+\section{Exercícios Propostos}
+
+Essa série de exercícios envolve os conceitos abordados neste capítulo e também \textbf{pode demandar alguma pesquisa}. Reserve um tempo e um local adequados para fazer os exercícios sem distrações. Assim você absorverá muito mais o conteúdo estudado.
+
+\begin{exercise}
+Crie um elemento de áudio com o atributo \var{controls} e adicione dois elementos \var{<source>} com diferentes formatos de áudio para que o navegador possa escolher qual usar com base na compatibilidade.
+\end{exercise}
+
+\begin{exercise}
+Adicione um elemento de áudio com uma música embutida, dois elementos \var{<source>} com diferentes formatos de áudio e um elemento \var{<track>} com a letra da música.
+\end{exercise}
+
+\begin{exercise}
+Crie um elemento de áudio que comece a tocar automaticamente quando a página é carregada e que tenha controles visíveis. Adicione dois elementos \var{<source>} com diferentes formatos de áudio.
+\end{exercise}
+
+\begin{exercise}
+Adicione um elemento de áudio com um atributo \var{loop} para que o áudio seja reproduzido continuamente. Adicione 3 elementos \var{<source>} com formatos distintos, tornando o MP3 como padrão.
+\end{exercise}
+
+\begin{exercise}
+Crie um elemento de áudio com um atributo \var{preload} definido como ``none'' e adicione dois elementos \var{<source>} com diferentes formatos de áudio para que o navegador não carregue o áudio previamente.
+\end{exercise}
+
+\begin{exercise}
+Adicione um áudio de um poema com início automático e com legendas em português e inglês. 
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo usando a tag \var{<video>}, definindo a URL do vídeo e os atributos de largura e altura.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo usando a tag \var{<video>}, adicionando múltiplas fontes de vídeo usando as tags \var{<source>} e especificando o tipo MIME de cada uma.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo usando a tag \var{<video>}, adicionando múltiplas fontes de vídeo usando as tags \var{<source>} e definindo a ordem de preferência de cada uma.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo usando a tag \var{<video>}, adicionando uma legenda usando a tag \var{<track>} e definindo o tipo e o URL do arquivo de legenda.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo usando a tag \var{<video>}, adicionando múltiplas faixas de legenda usando as tags \var{<track>} e definindo o tipo e o URL de cada arquivo de legenda.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo usando a tag \var{<video>}, adicionando um controle de volume usando o atributo \var{controls} e definindo o valor inicial do controle de volume.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo usando a tag \var{<video>}, adicionando um controle de progresso usando o atributo \var{controls} e definindo o valor inicial do controle de progresso.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo do YouTube incorporado em uma página, usando a \textit{tag} \var{<iframe>} e os parâmetros de URL para definir o tempo inicial e final do vídeo.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba uma playlist do YouTube incorporada em uma página, usando a \textit{tag} \var{<iframe>} e os parâmetros de URL para definir o índice do vídeo inicial e o modo de reprodução.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo do YouTube incorporado em uma página, usando a \textit{tag} \var{<iframe>} e os parâmetros de URL para definir o tamanho da tela do player e ocultar a barra de progresso.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba uma playlist do YouTube incorporada em uma página, usando a \textit{tag} \var{<iframe>} e os parâmetros de URL para definir o tamanho da tela do player e ocultar a barra de progresso.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo do YouTube incorporado em uma página, usando a \textit{tag} \var{<iframe>} e os parâmetros de URL para reproduzir o vídeo em loop e exibir os controles de volume.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba uma playlist do YouTube incorporada em uma página, usando a \textit{tag} \var{<iframe>} e os parâmetros de URL para reproduzir a playlist em loop e exibir os controles de volume.
+\end{exercise}
+
+\begin{exercise}
+Crie um arquivo HTML que exiba um vídeo do YouTube incorporado em uma página, usando a \textit{tag} \var{<iframe>} e os parâmetros de URL para definir a qualidade do vídeo e exibir a legenda em português (se disponível).
+\end{exercise}
+
+\section{Considerações Sobre o Capítulo}
+
+Neste capítulo, discutimos como incorporar áudio e vídeo em páginas HTML. Vimos como usar a \textit{tag} <audio> para incorporar arquivos de áudio e a \textit{tag} \var{<video>} para incorporar arquivos de vídeo. Além disso, aprendemos como incluir legendas usando a \textit{tag} <track> e como incorporar vídeos do YouTube em nossas páginas HTML usando a API do YouTube. Também discutimos como usar os atributos dessas \textit{tag}s para controlar o comportamento dos elementos de áudio e vídeo, como reprodução automática, loop e controles de mídia personalizados. Esperamos que este capítulo tenha sido útil para ajudá-lo a entender como adicionar áudio e vídeo em suas páginas HTML e melhorar a experiência do usuário em seu site.

@@ -1,0 +1,184 @@
+\chapter{Introdução}
+
+O CSS (\textit{Cascading Style Sheets}) é uma linguagem utilizada para estilizar páginas web. Ela é responsável pela aparência visual das páginas e é fundamental para garantir uma boa experiência do usuário.
+
+Através do CSS, é possível definir a cor, fonte, tamanho, margem, espaçamento e outros atributos dos elementos HTML. Dessa forma, os desenvolvedores podem criar páginas com um design agradável e coerente, que transmite informações de forma clara e objetiva.
+
+Além disso, o CSS permite criar layouts responsivos, que se adaptam a diferentes tamanhos de tela. Isso é essencial para garantir que o conteúdo da página seja exibido de forma adequada em dispositivos móveis, que têm telas menores e diferentes proporções em relação aos computadores desktop.
+
+Outra funcionalidade do CSS é a possibilidade de adicionar animações e transições aos elementos HTML. Esses recursos permitem criar uma experiência mais interativa e envolvente para o usuário, tornando a navegação mais agradável e aumentando o engajamento com a página.
+
+Em resumo, o CSS é uma ferramenta essencial para os desenvolvedores de páginas web, pois permite criar páginas visualmente atraentes, coerentes e adaptáveis a diferentes dispositivos. Ao longo desta seção, serão abordados conceitos fundamentais do CSS, desde os seletores básicos até técnicas avançadas de layout e animação.
+
+Ao longo deste capítulo, veremos como associar códigos CSS a um documento HTML, incluindo a inserção pelo atributo \var{style}, pelo elemento \var{style} e por arquivo CSS externo. Veremos também como criar seletores CSS básicos baseados em \textit{tags}, classes e IDs, além de seletores compostos pela combinação desses.
+
+\section{Associação de CSS a Documentos HTML}
+
+A associação de estilos CSS a documentos HTML é uma tarefa fundamental para o desenvolvimento de páginas web. Por meio do CSS, é possível definir estilos para elementos HTML, como fontes, cores, tamanhos, margens, posicionamento, entre outras propriedades. Basicamente, o visual de uma página HTML depende do CSS aplicado a ela.
+
+Existem três maneiras principais de associar estilos CSS a documentos HTML: via atributo \var{style}, via elemento \var{<style>} e via arquivos externos. Cada uma dessas formas tem suas vantagens e desvantagens e é de suma importância conhecê-las para escolher a melhor opção em cada situação.
+
+\subsection{CSS via Atributo \var{style}}
+
+A forma mais básica de associar um estilo CSS a um elemento HTML é por meio do atributo \var{style}. Esse atributo pode ser utilizado em qualquer elemento HTML e permite definir estilos diretamente no próprio elemento. O código \ref{exemplo-atributo-style} mostra um exemplo de como utilizar o atributo \var{style} em um elemento HTML para definir estilos CSS, uma vez que você terá que utilizar o atributo \var{style} em todos os elementos HTML que desejar estilizar.
+
+\begin{htmlcode}{Exemplo de CSS via Atributo \var{style}}{exemplo-atributo-style}
+<p style="color: red; font-size: 24px;">Este é um exemplo 
+    de texto com estilo definido pelo atributo style.</p>
+\end{htmlcode}
+
+Neste exemplo \ref{exemplo-atributo-style}, o atributo \var{style} é utilizado no elemento \var{<p>} para definir a cor do texto como vermelho e o tamanho da fonte como 24 pixels. Uma das principais vantagens de utilizar o atributo \var{style} é a sua simplicidade, já que não é necessário criar um arquivo CSS separado para definir os estilos. No entanto, essa forma de associar estilos pode tornar o código HTML mais extenso e difícil de manter em projetos maiores.
+
+\subsection{CSS via Elemento \var{<style>}}
+
+Outra forma de associar estilos CSS a documentos HTML é por meio do elemento \var{<style>}. Esse elemento pode ser utilizado dentro da seção \var{<head>} do documento HTML e permite definir estilos para todos os elementos do documento. O código \ref{exemplo-elemento-style} mostra um exemplo de como utilizar o elemento \var{<style>} para definir estilos CSS para todos os elementos \var{<p>} de um documento HTML.
+
+\begin{htmlcode}{Exemplo de CSS via Elemento \var{<style>}}{exemplo-elemento-style}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de CSS via Elemento <style></title>
+    <style>
+        p {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <p>Este é um exemplo de texto com estilo definido pelo elemento <style>.</p>
+    <p>Este é outro exemplo de texto com estilo definido pelo elemento <style>.</p>
+</body>
+</html>
+\end{htmlcode}
+
+Neste exemplo \ref{exemplo-elemento-style}, o elemento \var{<style>} é utilizado para definir que todos os elementos \var{<p>} do documento terão a cor vermelha no texto e o tamanho de 24 pixels na fonte. Uma das principais vantagens de utilizar o elemento \var{<style>} é a sua capacidade de definir estilos para todos os elementos de um documento HTML de uma só vez. Além disso, essa forma de associar estilos permite separar a definição dos estilos da estrutura do documento HTML, o que torna o código mais organizado e fácil de manter em projetos maiores. Porém, essa abordagem não permite compartilhar o CSS entre páginas distintas.
+
+\subsection{CSS via Arquivos Externos}
+
+A forma mais comum e recomendada de associar estilos CSS a documentos HTML é por meio de arquivos externos. Nessa abordagem, os estilos são definidos em um arquivo CSS separado e associados ao documento HTML por meio de uma tag \var{<link>} na seção \var{<head>} do documento HTML. O código \ref{arquivo-css-externo} mostra um exemplo de um arquivo CSS externo que define estilos para todos os elementos \var{<p>} de um documento HTML.
+
+\vspace{5pt}
+\begin{csscode}{Arquivo CSS externo.}{arquivo-css-externo}
+p {
+    color: red;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+\end{csscode}
+
+O código \ref{arquivo-css-externo} mostra um exemplo de como criar um arquivo CSS externo para definir estilos CSS para todos os elementos \var{<p>} de um documento HTML, formatando a fonte do parágrafo com a cor vermelha, com 24 pixels de tamanho e com todas as letras em maiúsculas. Considere que esse arquivo CSS externo chama-se ``estilos.css'' e esteja na mesma pasta do documento HTML. Neste caso, o código \ref{exemplo-arquivo-css} mostra como associar o arquivo CSS externo ao documento HTML por meio da tag \var{<link>} na seção \var{<head>}.
+
+\begin{htmlcode}{Exemplo de CSS via Arquivos Externos}{exemplo-arquivo-css}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de CSS via Arquivos Externos</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <h1>Exemplo de CSS via Arquivos Externos</h1>
+    <p>Este é um exemplo de texto com estilo definido por um 
+        arquivo CSS externo.</p>
+    <p>Este é outro exemplo de texto com estilo definido por um 
+        arquivo CSS externo.</p>
+    <p><a href="temp.html">Este é um exemplo de link com estilo definido por um 
+        arquivo CSS externo.</a></p>
+</body>
+</html>
+\end{htmlcode}
+
+No exemplo \ref{exemplo-arquivo-css}, os estilos são definidos em um arquivo CSS externo chamado ``estilos.css'', que é associado ao documento HTML por meio da tag \var{<link>}. Veremos mais adiante que até o elemento \var{<a>} será afetado pelas configurações CSS para o elemento \var{<p>}. Por agora, perceba que a principal vantagem de utilizar arquivos CSS externos é a capacidade de reutilizar os mesmos estilos em vários documentos HTML. Além disso, essa abordagem permite separar completamente a definição dos estilos da estrutura e conteúdo do documento HTML, o que torna o código mais organizado, fácil de manter e otimizado para SEO (\textit{Search Engine Optimization}).
+
+\section{Seletores CSS Básicos}
+
+Os seletores CSS são usados para identificar quais elementos HTML receberão os estilos CSS de um determinado bloco. Existem vários tipos de seletores CSS. Nesta seção, apresentaremos os seletores básicos, a saber, seletores por tipo de elemento, seletores por classe e seletores por ID.
+
+\subsection{Seletor por Tipo de Elemento}
+
+O seletor por tipo de elemento é usado para selecionar todos os elementos HTML de um determinado tipo. Por exemplo, para aplicar um estilo a todos os parágrafos de um documento, podemos usar o seletor de tipo de elemento \var{p}. O código \ref{exemplo-tipo-elemento} mostra um exemplo de seletor por tipo de elemento que aplica uma cor de fundo a todos os parágrafos de um documento.
+
+\begin{csscode}{Seletor CSS por tipo de elemento.}{exemplo-tipo-elemento}
+p {
+    background-color: yellow;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-tipo-elemento}, o seletor \var{p} seleciona todos os elementos HTML do tipo \var{p}, e a propriedade \var{background-color} define a cor de fundo como amarelo.
+
+\subsection{Seletor por Classe}
+
+O seletor por classe é usado para selecionar elementos HTML com uma determinada classe. As classes são definidas no HTML usando o atributo \var{class}. Podemos usar o seletor por classe para aplicar estilos a vários elementos HTML com a mesma classe. O código \ref{exemplo-classe} mostra um exemplo de seletor por classe que aplica uma cor de fundo a todos os elementos com a classe \var{destaque}.
+
+\begin{csscode}{Seletor CSS por classe.}{exemplo-classe}
+.destaque {
+    background-color: yellow;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-classe}, o seletor \var{.destaque} seleciona todos os elementos HTML com a classe \var{destaque}, e a propriedade \var{background-color} define a cor de fundo como amarelo. Para usar a classe \var{destaque}, basta adicionar o atributo \var{class="destaque"} ao elemento HTML em questão. Por exemplo, o código \ref{exemplo-classe-html} mostra como aplicar a classe \var{destaque} a um elemento \var{<p>}.
+
+\begin{htmlcode}{Exemplo de seletor por classe sendo usado.}{exemplo-classe-html}
+...
+<p class="destaque">Este é um exemplo de texto com estilo definido por uma 
+    classe CSS.</p>
+...
+\end{htmlcode}
+
+\subsection{Seletor por ID}
+
+O seletor por ID é usado para selecionar um elemento HTML com um ID específico. Os IDs são definidos no HTML usando o atributo \var{id}. Cada ID deve ser exclusivo em um documento HTML. O código \ref{exemplo-id} mostra um exemplo de seletor CSS por ID, que aplica uma cor de fundo a um elemento cujo ID é igual a \var{cabecalho}.
+
+\begin{csscode}{Seletor CSS por ID.}{exemplo-id}
+#cabecalho {
+    background-color: yellow;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-id}, o seletor \var{\#cabecalho} seleciona o elemento HTML cujo ID seja igual a \var{cabecalho} e a propriedade \var{background-color} define a cor de fundo como amarelo. O exemplo \ref{exemplo-classe-id} mostra um elemento \var{<h1>} cujo ID é igual a \var{cabecalho}, o que quer dizer que ele será afetado pelo seletor CSS em questão.
+
+\begin{htmlcode}{Exemplo de seletor por ID sendo usado.}{exemplo-classe-id}
+...
+<h1 id="cabecalho">Cabecalho com estilo definido por uma classe CSS.</h1>
+...
+\end{htmlcode}
+
+\section{Seletores Compostos}
+
+Os seletores compostos são uma combinação de dois ou mais seletores que são usados para selecionar elementos HTML de forma mais específica. Existem vários tipos de seletores compostos e, nesta subseção, apresentaremos os mais comuns.
+
+\subsection{Seletor por Descendente}
+
+O seletor por descendente é usado para selecionar elementos HTML que são filhos de outro elemento HTML. Por exemplo, para aplicar um estilo a todos os parágrafos dentro de um elemento qualquer da classe \var{container}, podemos usar o seletor por descendente \var{.container p}. O código \ref{exemplo-descendente} mostra um exemplo de seletor por descendente que aplica uma cor de fundo a todos os parágrafos dentro de um elemneto da classe \var{container}.
+
+\begin{csscode}{Seletor por descendente}{exemplo-descendente}
+.container p {
+    background-color: yellow;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-descendente}, o seletor \var{.container p} seleciona todos os parágrafos que são descendentes de um elemento da classe \var{container}, e a propriedade \var{background-color} define a cor de fundo como amarelo. Observe que o caractere de espaço que precede o \var{p} já define a relação de descendência de \var{p} em relação à classe \var{.container}.
+
+\subsection{Seletor de Classe e Tipo de Elemento}
+
+O seletor de classe e tipo de elemento é usado para selecionar elementos HTML que são de um determinado tipo e têm uma determinada classe. Por exemplo, para aplicar um estilo a todos os botões da classe \var{botao}, podemos usar o seletor de classe e tipo de elemento \var{button.botao}. O código \ref{exemplo-classe-tipo} mostra um exemplo de seletor de classe e tipo de elemento que aplica uma cor de fundo a todos os botões com a classe \var{botao}.
+
+\begin{csscode}{Seletor CSS por classe e tipo de elemento.}{exemplo-classe-tipo}
+button.botao {
+    background-color: yellow;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-classe-tipo}, o seletor \var{button.botao} seleciona todos os botões com a classe \var{botao}, e a propriedade \var{background-color} define a cor de fundo como amarelo. Vale mencionar que eu poderia usar um seletor desse tipo combinado com um seletor por descendente, conforme o código \ref{exemplo-classe-tipo-descendente}.
+
+\begin{csscode}{Seletor CSS por classe e tipo de elemento com descendente.}{exemplo-classe-tipo-descendente}
+button.botao span {
+    font-size: 16px;
+}
+\end{csscode}
+
+O código \ref{exemplo-classe-tipo-descendente} define um estilo para um elemento HTML \var{<span>} que está contido dentro de um botão da classe \var{botao}, definindo o tamanho da fonte como 16 pixels.
+
+\section{Exercícios Propostos}
+
+Essa série de exercícios envolve os conceitos abordados neste capítulo e também \textbf{pode demandar alguma pesquisa}. Reserve um tempo e um local adequados para fazer os exercícios sem distrações. Assim você absorverá muito mais o conteúdo estudado.
