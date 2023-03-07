@@ -127,8 +127,37 @@
 \contentsline {subsection}{\numberline {8.3.1}Seletor por Descendente}{116}{subsection.8.3.1}%
 \contentsline {subsection}{\numberline {8.3.2}Seletor de Classe e Tipo de Elemento}{117}{subsection.8.3.2}%
 \contentsline {section}{\numberline {8.4}Exercícios Propostos}{117}{section.8.4}%
-\contentsline {chapter}{\textcolor {darkgreen}{Bibliografia}}{121}{chapter*.34}%
-\contentsline {section}{Artigos}{121}{chapter*.34}%
-\contentsline {section}{Livros}{121}{chapter*.34}%
+\contentsline {chapter}{\numberline {9}Cores, Planos de Fundo, Bordas e Margens}{121}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Cores}{122}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Introdução às Cores em CSS}{122}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Formatos de Cores em CSS}{122}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Gradientes}{123}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}Unidades de Medida}{124}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Pixels (px)}{124}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Pontos (pt)}{124}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Centímetros (cm) e Milímetros (mm)}{125}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}\textit {EM} e \textit {REM}}{125}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}Porcentagem (\%)}{126}{subsection.9.2.5}%
+\contentsline {subsection}{\numberline {9.2.6}Outras unidades de medida}{126}{subsection.9.2.6}%
+\contentsline {section}{\numberline {9.3}Planos de Fundo}{127}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Propriedade \texttt {background-color}}{127}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Propriedade \texttt {background-image}}{127}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Propriedade \texttt {background-repeat}}{128}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Propriedade \texttt {background-position}}{128}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Propriedade \texttt {background-attachment}}{128}{subsection.9.3.5}%
+\contentsline {subsection}{\numberline {9.3.6}Propriedade \texttt {background-size}}{129}{subsection.9.3.6}%
+\contentsline {section}{\numberline {9.4}Bordas}{129}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Propriedade \texttt {border-color}}{129}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Propriedade \texttt {border-width}}{130}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Propriedade \texttt {border-style}}{130}{subsection.9.4.3}%
+\contentsline {subsection}{\numberline {9.4.4}Propriedade \texttt {border-radius}}{130}{subsection.9.4.4}%
+\contentsline {subsection}{\numberline {9.4.5}Propriedades Multivaloradas}{131}{subsection.9.4.5}%
+\contentsline {subsection}{\numberline {9.4.6}Bordas do Tipo \textit {Outline}}{131}{subsection.9.4.6}%
+\contentsline {section}{\numberline {9.5}Margens Interna e Externa}{132}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Valor Automático da Propriedade \texttt {margin}}{133}{subsection.9.5.1}%
+\contentsline {section}{\numberline {9.6}Exercícios Propostos}{134}{section.9.6}%
+\contentsline {chapter}{\textcolor {darkgreen}{Bibliografia}}{135}{chapter*.34}%
+\contentsline {section}{Artigos}{135}{chapter*.34}%
+\contentsline {section}{Livros}{135}{chapter*.34}%
 \ttl@stoptoc {part@2}
 \contentsfinish 
