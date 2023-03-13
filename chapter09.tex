@@ -64,7 +64,7 @@ li {
 }
 \end{csscode}
 
-Neste exemplo \ref{exemplo-formatos-de-cores}, cada seletor CSS usa um formato de cor diferente. O primeiro exemplo usa uma cor nomeada \var{red} para o texto de um cabeçalho (\texttt{h1}). O segundo exemplo usa a sintaxe RGB para definir a cor do texto de um parágrafo (\texttt{p}) como vermelho. O terceiro exemplo usa a sintaxe RGBA para definir um fundo verde com 50\% de transparência para uma \texttt{div}. O quarto exemplo usa a sintaxe HSL para definir um plano de fundo com uma matiz verde-azulada para um \texttt{span}. O quinto exemplo usa a sintaxe HSLA para definir um plano de fundo com uma matiz azul-esverdeada para um link (\texttt{a}) com 30\% de transparência. Por fim, o sexto exemplo usa a sintaxe hexadecimal para definir a cor do texto de um item de lista (\texttt{li}) como azul.
+Neste exemplo \ref{exemplo-formatos-de-cores}, cada seletor CSS usa um formato de cor diferente. O primeiro exemplo usa uma cor nomeada \var{red} para o texto de um cabeçalho (\var{h1}). O segundo exemplo usa a sintaxe RGB para definir a cor do texto de um parágrafo (\var{p}) como vermelho. O terceiro exemplo usa a sintaxe RGBA para definir um fundo verde com 50\% de transparência para uma \var{div}. O quarto exemplo usa a sintaxe HSL para definir um plano de fundo com uma matiz verde-azulada para um \var{span}. O quinto exemplo usa a sintaxe HSLA para definir um plano de fundo com uma matiz azul-esverdeada para um link (\var{a}) com 30\% de transparência. Por fim, o sexto exemplo usa a sintaxe hexadecimal para definir a cor do texto de um item de lista (\var{li}) como azul.
 
 \subsection{Gradientes}
 
@@ -82,7 +82,7 @@ button {
 }
 \end{csscode}
 
-Neste código \ref{exemplo-gradiente}, o primeiro exemplo usa um gradiente linear para o plano de fundo seletor CSS para a classe \texttt{header} com uma transição suave entre as cores \#f8f8f8 e \#ffffff. O segundo exemplo usa um gradiente radial para o plano de fundo de elementos do tipo \texttt{button} com uma transição suave entre as cores \#ffffff e \#008000.
+Neste código \ref{exemplo-gradiente}, o primeiro exemplo usa um gradiente linear para o plano de fundo seletor CSS para a classe \var{header} com uma transição suave entre as cores \#f8f8f8 e \#ffffff. O segundo exemplo usa um gradiente radial para o plano de fundo de elementos do tipo \var{button} com uma transição suave entre as cores \#ffffff e \#008000.
 
 \section{Unidades de Medida}
 
@@ -130,7 +130,7 @@ Neste exemplo \ref{exemplo_cm}, estamos definindo o tamanho de um elemento usand
 
 As unidades de medida \var{em} e \var{rem} são usadas para definir tamanhos relativos. A unidade \var{em} é baseada no tamanho da fonte do elemento pai, enquanto a unidade \var{rem} é baseada no tamanho da fonte do elemento raiz (normalmente o elemento \var{html}). O código \ref{exemplo_em_rem} mostra um exemplo de como definir o tamanho de uma fonte em \var{em} e \var{rem}.
 
-\begin{csscode}{Exemplo de uso das unidades \texttt{em} e \texttt{rem}.}{exemplo_em_rem}
+\begin{csscode}{Exemplo de uso das unidades \var{em} e \var{rem}.}{exemplo_em_rem}
 .exemplo {
     font-size: 1.2em; /* 1.2 vezes o tamanho da fonte do elemento pai */
 }
@@ -165,7 +165,7 @@ A unidade de medida porcentagem é muito útil para criar leiautes responsivos, 
 
 Além das unidades de medida mencionadas acima, existem outras unidades de medida disponíveis no CSS, como \var{vw} (\textit{viewport width}), \var{vh} (\textit{viewport height}), \var{vmin} (\textit{viewport minimum}) e \var{vmax} (\textit{viewport maximum}). Essas unidades de medida são baseadas no tamanho da janela do navegador (\textit{viewport}) e são úteis para criar leiautes responsivos. O código \ref{exemplo_vw_vh} mostra um exemplo de como definir o tamanho de um elemento usando as unidades de medida \var{vw} e \var{vh}.
 
-\begin{csscode}{Exemplo de uso das unidades \texttt{vw} e \texttt{vh}.}{exemplo_vw_vh}
+\begin{csscode}{Exemplo de uso das unidades \var{vw} e \var{vh}.}{exemplo_vw_vh}
 .exemplo {
     width: 50vw; /* 50% da largura da janela do navegador */
     height: 30vh; /* 30% da altura da janela do navegador */
@@ -180,11 +180,11 @@ Em resumo, as unidades de medida são uma parte importante do CSS e são usadas 
 
 O plano de fundo é uma parte importante do design de uma página web. Com CSS, podemos adicionar cor, imagens e texturas de fundo à nossa página, tornando-a mais atraente. Nesta seção, vamos explorar as propriedades CSS que controlam o plano de fundo de um elemento.
 
-\subsection{Propriedade \texttt{background-color}}
+\subsection{Propriedade \var{background-color}}
 
-A propriedade \texttt{background-color} define a cor de fundo de um elemento. Podemos definir a cor usando um dos formatos de cores apresentados anteriormente neste capítulo. O código \ref{bg-color} mostra um exemplo de como definir a cor de fundo de um elemento.
+A propriedade \var{background-color} define a cor de fundo de um elemento. Podemos definir a cor usando um dos formatos de cores apresentados anteriormente neste capítulo. O código \ref{bg-color} mostra um exemplo de como definir a cor de fundo de um elemento.
 
-\begin{csscode}{Definindo a cor de fundo com \texttt{background-color}.}{bg-color}
+\begin{csscode}{Definindo a cor de fundo com \var{background-color}.}{bg-color}
 .exemplo {
     background-color: #FFFFFF;
 }
@@ -192,11 +192,11 @@ A propriedade \texttt{background-color} define a cor de fundo de um elemento. Po
 
 Neste exemplo \ref{bg-color}, a classe \var{.exemplo} tem a cor de fundo definida como branco. O valor hexadecimal \var{\#FFFFFF} representa a cor branca em RGB.
 
-\subsection{Propriedade \texttt{background-image}}
+\subsection{Propriedade \var{background-image}}
 
-A propriedade \texttt{background-image} define uma imagem de fundo para um elemento. Podemos definir a imagem usando uma URL ou um caminho relativo. É importante escolher uma imagem que tenha um tamanho adequado para o elemento. O código \ref{bg-image} mostra um exemplo de como definir uma imagem de fundo para um elemento.
+A propriedade \var{background-image} define uma imagem de fundo para um elemento. Podemos definir a imagem usando uma URL ou um caminho relativo. É importante escolher uma imagem que tenha um tamanho adequado para o elemento. O código \ref{bg-image} mostra um exemplo de como definir uma imagem de fundo para um elemento.
 
-\begin{csscode}{Definindo uma imagem de fundo com \texttt{background-image}.}{bg-image}
+\begin{csscode}{Definindo uma imagem de fundo com \var{background-image}.}{bg-image}
 .exemplo {
     background-image: url("imagem.jpg");
 }
@@ -204,11 +204,11 @@ A propriedade \texttt{background-image} define uma imagem de fundo para um eleme
 
 Neste exemplo \ref{bg-image}, a classe \var{.exemplo} tem a imagem de fundo definida como \var{imagem.jpg}. É importante lembrar que a imagem deve estar no mesmo diretório do arquivo HTML ou ter um caminho relativo correto.
 
-\subsection{Propriedade \texttt{background-repeat}}
+\subsection{Propriedade \var{background-repeat}}
 
-A propriedade \texttt{background-repeat} define como a imagem de fundo deve ser repetida dentro do elemento. Existem quatro valores possíveis para essa propriedade: \texttt{repeat} (repete horizontalmente e verticalmente), \texttt{repeat-x} (repete apenas horizontalmente), \texttt{repeat-y} (repete apenas verticalmente) e \texttt{no-repeat} (não repete). O código \ref{bg-repeat} mostra um exemplo de como definir a repetição da imagem de fundo para um elemento.
+A propriedade \var{background-repeat} define como a imagem de fundo deve ser repetida dentro do elemento. Existem quatro valores possíveis para essa propriedade: \var{repeat} (repete horizontalmente e verticalmente), \var{repeat-x} (repete apenas horizontalmente), \var{repeat-y} (repete apenas verticalmente) e \var{no-repeat} (não repete). O código \ref{bg-repeat} mostra um exemplo de como definir a repetição da imagem de fundo para um elemento.
 
-\begin{csscode}{Definindo a repetição da imagem de fundo com \texttt{background-repeat}.}{bg-repeat}
+\begin{csscode}{Definindo a repetição da imagem de fundo com \var{background-repeat}.}{bg-repeat}
 .exemplo {
     background-image: url("imagem.jpg");
     background-repeat: repeat-x;
@@ -217,11 +217,11 @@ A propriedade \texttt{background-repeat} define como a imagem de fundo deve ser 
 
 Neste exemplo \ref{bg-repeat}, a classe \var{.exemplo} tem a imagem de fundo definida como \var{imagem.jpg} e a repetição definida como \var{repeat-x}, ou seja, a imagem será repetida apenas horizontalmente.
 
-\subsection{Propriedade \texttt{background-position}}
+\subsection{Propriedade \var{background-position}}
 
-A propriedade \texttt{background-position} define a posição inicial da imagem de fundo dentro do elemento. Podemos definir a posição usando palavras-chave (\texttt{top}, \texttt{bottom}, \texttt{left}, \texttt{right}, \texttt{center}) ou valores em porcentagem ou pixels. O código \ref{bg-position} mostra um exemplo de como definir a posição da imagem de fundo para um elemento.
+A propriedade \var{background-position} define a posição inicial da imagem de fundo dentro do elemento. Podemos definir a posição usando palavras-chave (\var{top}, \var{bottom}, \var{left}, \var{right}, \var{center}) ou valores em porcentagem ou pixels. O código \ref{bg-position} mostra um exemplo de como definir a posição da imagem de fundo para um elemento.
 
-\begin{csscode}{Definindo a posição da imagem de fundo com \texttt{background-position}.}{bg-position}
+\begin{csscode}{Definindo a posição da imagem de fundo com \var{background-position}.}{bg-position}
 .exemplo {
     background-image: url("imagem.jpg");
     background-position: center;
@@ -230,11 +230,11 @@ A propriedade \texttt{background-position} define a posição inicial da imagem 
 
 Neste exemplo \ref{bg-position}, a classe \var{.exemplo} tem a imagem de fundo definida como \var{imagem.jpg} e a posição definida como \var{center}, ou seja, a imagem será centralizada dentro do elemento.
 
-\subsection{Propriedade \texttt{background-attachment}}
+\subsection{Propriedade \var{background-attachment}}
 
-A propriedade \texttt{background-attachment} define se a imagem de fundo deve se mover com o restante do conteúdo da página ou ficar fixa no lugar enquanto o conteúdo se move. Existem dois valores possíveis para essa propriedade: \texttt{scroll} (a imagem se move com o restante do conteúdo) e \texttt{fixed} (a imagem fica fixa no lugar enquanto o conteúdo se move). O código \ref{bg-attachment} mostra um exemplo de como definir a fixação da imagem de fundo para um elemento.
+A propriedade \var{background-attachment} define se a imagem de fundo deve se mover com o restante do conteúdo da página ou ficar fixa no lugar enquanto o conteúdo se move. Existem dois valores possíveis para essa propriedade: \var{scroll} (a imagem se move com o restante do conteúdo) e \var{fixed} (a imagem fica fixa no lugar enquanto o conteúdo se move). O código \ref{bg-attachment} mostra um exemplo de como definir a fixação da imagem de fundo para um elemento.
 
-\begin{csscode}{Definindo a fixação da imagem de fundo com \texttt{background-attachment}.}{bg-attachment}
+\begin{csscode}{Definindo a fixação da imagem de fundo com \var{background-attachment}.}{bg-attachment}
 .exemplo {
     background-image: url("imagem.jpg");
     background-attachment: fixed;
@@ -243,9 +243,9 @@ A propriedade \texttt{background-attachment} define se a imagem de fundo deve se
 
 Neste exemplo \ref{bg-attachment}, a classe \var{.exemplo} tem a imagem de fundo definida como \var{imagem.jpg} e a fixação definida como \var{fixed}, ou seja, a imagem ficará fixa no lugar enquanto o a página rola.
 
-\subsection{Propriedade \texttt{background-size}}
+\subsection{Propriedade \var{background-size}}
 
-A propriedade \texttt{background-size} define o tamanho da imagem de fundo em relação ao elemento. Podemos definir o tamanho usando valores em porcentagem, pixels, palavras-chave (\texttt{cover} e \texttt{contain}) ou uma combinação de valores para largura e altura. O código \ref{bg-size} mostra um exemplo de como definir o tamanho da imagem de fundo para um elemento.
+A propriedade \var{background-size} define o tamanho da imagem de fundo em relação ao elemento. Podemos definir o tamanho usando valores em porcentagem, pixels, palavras-chave (\var{cover} e \var{contain}) ou uma combinação de valores para largura e altura. O código \ref{bg-size} mostra um exemplo de como definir o tamanho da imagem de fundo para um elemento.
 
 \begin{csscode}{Definindo o tamanho da imagem de fundo com background-size}{bg-size}
 .exemplo {
@@ -258,11 +258,11 @@ Neste exemplo \ref{bg-size}, a classe \var{.exemplo} tem a imagem de fundo defin
 
 \section{Bordas}
 
-As bordas são importantes para definir o leiaute e o estilo de um elemento HTML. Em CSS, existem diversas propriedades que permitem personalizar a aparência das bordas, como \texttt{border-color}, \texttt{border-width}, \texttt{border-style}, \texttt{border-radius}, e as propriedades de bordas individuais, como \texttt{border-left} e \texttt{border-right}.
+As bordas são importantes para definir o leiaute e o estilo de um elemento HTML. Em CSS, existem diversas propriedades que permitem personalizar a aparência das bordas, como \var{border-color}, \var{border-width}, \var{border-style}, \var{border-radius}, e as propriedades de bordas individuais, como \var{border-left} e \var{border-right}.
 
-\subsection{Propriedade \texttt{border-color}}
+\subsection{Propriedade \var{border-color}}
 
-A propriedade \texttt{border-color} define a cor da borda de um elemento. Ela pode ser definida de várias formas, como por um nome de cor, um valor hexadecimal ou RGB. O código \ref{border-color-exemplo} mostra um exemplo de como definir a cor da borda para um elemento.
+A propriedade \var{border-color} define a cor da borda de um elemento. Ela pode ser definida de várias formas, como por um nome de cor, um valor hexadecimal ou RGB. O código \ref{border-color-exemplo} mostra um exemplo de como definir a cor da borda para um elemento.
 
 \begin{csscode}{Exemplo de \var{border-color}.}{border-color-exemplo}
 p {
@@ -270,69 +270,69 @@ p {
 }
 \end{csscode}
 
-Neste exemplo \ref{border-color-exemplo}, a borda de um parágrafo é definida com a cor vermelha. É possível também definir a cor das quatro bordas individualmente, usando as propriedades \texttt{border-top-color}, \texttt{border-right-color}, \texttt{border-bottom-color} e \texttt{border-left-color}.
+Neste exemplo \ref{border-color-exemplo}, a borda de um parágrafo é definida com a cor vermelha. É possível também definir a cor das quatro bordas individualmente, usando as propriedades \var{border-top-color}, \var{border-right-color}, \var{border-bottom-color} e \var{border-left-color}.
 
-\subsection{Propriedade \texttt{border-width}}
+\subsection{Propriedade \var{border-width}}
 
-A propriedade \texttt{border-width} define a largura da borda de um elemento. Ela pode ser definida em valores absolutos, como em pixels, ou em valores relativos, como em porcentagem. O código \ref{border-width-exemplo} mostra um exemplo de como definir a largura da borda para um elemento.
+A propriedade \var{border-width} define a largura da borda de um elemento. Ela pode ser definida em valores absolutos, como em pixels, ou em valores relativos, como em porcentagem. O código \ref{border-width-exemplo} mostra um exemplo de como definir a largura da borda para um elemento.
 
-\begin{csscode}{Exemplo de uso da propriedade \texttt{border-width}.}{border-width-exemplo}
+\begin{csscode}{Exemplo de uso da propriedade \var{border-width}.}{border-width-exemplo}
 p {
     border-width: 2px;
 }
 \end{csscode}
 
-Neste exemplo \ref{border-width-exemplo}, a borda de um parágrafo é definida com a largura de 2 pixels. É possível também definir a largura das quatro bordas individualmente, usando as propriedades \texttt{border-top-width}, \texttt{border-right-width}, \texttt{border-bottom-width} e \texttt{border-left-width}.
+Neste exemplo \ref{border-width-exemplo}, a borda de um parágrafo é definida com a largura de 2 pixels. É possível também definir a largura das quatro bordas individualmente, usando as propriedades \var{border-top-width}, \var{border-right-width}, \var{border-bottom-width} e \var{border-left-width}.
 
-\subsection{Propriedade \texttt{border-style}}
+\subsection{Propriedade \var{border-style}}
 
-A propriedade \texttt{border-style} define o estilo da borda de um elemento. Existem diversos estilos de bordas, como \texttt{solid}, \texttt{dashed}, \texttt{dotted}, \texttt{double}, \texttt{groove}, \texttt{ridge}, \texttt{inset} e \texttt{outset}. O código \ref{border-style-exemplo} mostra um exemplo de como definir o estilo da borda para um elemento.
+A propriedade \var{border-style} define o estilo da borda de um elemento. Existem diversos estilos de bordas, como \var{solid}, \var{dashed}, \var{dotted}, \var{double}, \var{groove}, \var{ridge}, \var{inset} e \var{outset}. O código \ref{border-style-exemplo} mostra um exemplo de como definir o estilo da borda para um elemento.
 
-\begin{csscode}{Exemplo de uso da propriedade \texttt{border-style}.}{border-style-exemplo}
+\begin{csscode}{Exemplo de uso da propriedade \var{border-style}.}{border-style-exemplo}
 p {
     border-style: dotted;
 }
 \end{csscode}
 
-Neste exemplo \ref{border-style-exemplo}, a borda de um parágrafo é definida com o estilo pontilhado. É possível também definir o estilo das quatro bordas individualmente, usando as propriedades \texttt{border-top-style}, \texttt{border-right-style}, \texttt{border-bottom-style} e \texttt{border-left-style}.
+Neste exemplo \ref{border-style-exemplo}, a borda de um parágrafo é definida com o estilo pontilhado. É possível também definir o estilo das quatro bordas individualmente, usando as propriedades \var{border-top-style}, \var{border-right-style}, \var{border-bottom-style} e \var{border-left-style}.
 
-\subsection{Propriedade \texttt{border-radius}}
+\subsection{Propriedade \var{border-radius}}
 
-A propriedade \texttt{border-radius} define o raio dos cantos de uma borda. Ela pode ser definida em valores absolutos, como em pixels, ou em valores relativos, como em porcentagem. O código \ref{border-radius-exemplo} mostra um exemplo de como definir o raio dos cantos da borda para um elemento.
+A propriedade \var{border-radius} define o raio dos cantos de uma borda. Ela pode ser definida em valores absolutos, como em pixels, ou em valores relativos, como em porcentagem. O código \ref{border-radius-exemplo} mostra um exemplo de como definir o raio dos cantos da borda para um elemento.
 
-\begin{csscode}{Exemplo de uso da propriedade \texttt{border-radius}.}{border-radius-exemplo}
+\begin{csscode}{Exemplo de uso da propriedade \var{border-radius}.}{border-radius-exemplo}
 p {
     border-radius: 10px;
 }
 \end{csscode}
 
-Neste exemplo \ref{border-radius-exemplo}, os cantos da borda de um parágrafo são definidos com um raio de 10 pixels. É possível também definir o raio dos cantos individualmente, usando as propriedades \texttt{border-top-left-radius}, \texttt{border-top-right-radius}, \texttt{border-bottom-left-radius} e \texttt{border-bottom-right-radius}.
+Neste exemplo \ref{border-radius-exemplo}, os cantos da borda de um parágrafo são definidos com um raio de 10 pixels. É possível também definir o raio dos cantos individualmente, usando as propriedades \var{border-top-left-radius}, \var{border-top-right-radius}, \var{border-bottom-left-radius} e \var{border-bottom-right-radius}.
 
 \subsection{Propriedades Multivaloradas}
 
-Além das propriedades de bordas que aceitam valores individuais, é possível usar a propriedade \texttt{border} para definir todas as propriedades de borda de um elemento de uma só vez. O código \ref{border-exemplo} mostra um exemplo de como definir a borda para um elemento.
+Além das propriedades de bordas que aceitam valores individuais, é possível usar a propriedade \var{border} para definir todas as propriedades de borda de um elemento de uma só vez. O código \ref{border-exemplo} mostra um exemplo de como definir a borda para um elemento.
 
-\begin{csscode}{Exemplo de uso da propriedade \texttt{border}.}{border-exemplo}
+\begin{csscode}{Exemplo de uso da propriedade \var{border}.}{border-exemplo}
 p {
     border: 2px dashed red;
 }
 \end{csscode}
 
-Neste exemplo \ref{border-exemplo}, a borda de um parágrafo é definida com a largura de 2 pixels, o estilo tracejado e a cor vermelha, tudo em uma única propriedade \texttt{border}. Também é possível usar a propriedade \texttt{border-left} para definir todas as propriedades de borda da borda esquerda de um elemento de uma só vez. O código \ref{border-left-exemplo} mostra um exemplo de como definir a borda esquerda para um elemento.
+Neste exemplo \ref{border-exemplo}, a borda de um parágrafo é definida com a largura de 2 pixels, o estilo tracejado e a cor vermelha, tudo em uma única propriedade \var{border}. Também é possível usar a propriedade \var{border-left} para definir todas as propriedades de borda da borda esquerda de um elemento de uma só vez. O código \ref{border-left-exemplo} mostra um exemplo de como definir a borda esquerda para um elemento.
 
-\begin{csscode}{Exemplo de uso da propriedade \texttt{border-left}.}{border-left-exemplo}
+\begin{csscode}{Exemplo de uso da propriedade \var{border-left}.}{border-left-exemplo}
 p {
     border-left: 2px dashed red;
 }
 \end{csscode}
 
-Neste exemplo \ref{border-left-exemplo}, a borda esquerda de um parágrafo é definida com a largura de 2 pixels, o estilo tracejado e a cor vermelha, tudo em uma única propriedade \texttt{border-left}. O uso dessas propriedades pode tornar o código CSS mais simples e legível, especialmente quando se deseja aplicar as mesmas propriedades para todas as bordas ou apenas para uma borda específica de um elemento.
+Neste exemplo \ref{border-left-exemplo}, a borda esquerda de um parágrafo é definida com a largura de 2 pixels, o estilo tracejado e a cor vermelha, tudo em uma única propriedade \var{border-left}. O uso dessas propriedades pode tornar o código CSS mais simples e legível, especialmente quando se deseja aplicar as mesmas propriedades para todas as bordas ou apenas para uma borda específica de um elemento.
 
 \subsection{Bordas do Tipo \textit{Outline}}
 
-Além das bordas normais, que são definidas pelas propriedades \texttt{border}, é possível criar bordas do tipo \textit{outline} em CSS. As bordas do tipo \textit{outline} são semelhantes às bordas normais, mas não afetam o tamanho ou o leiaute do elemento HTML e podem ter um afastamento. As bordas do tipo \textit{outline} são definidas pela propriedade \texttt{outline}, que pode receber valores como largura, estilo e cor. O código \ref{outline-exemplo} mostra um exemplo de como definir a borda do tipo \textit{outline} para um elemento.
+Além das bordas normais, que são definidas pelas propriedades \var{border}, é possível criar bordas do tipo \textit{outline} em CSS. As bordas do tipo \textit{outline} são semelhantes às bordas normais, mas não afetam o tamanho ou o leiaute do elemento HTML e podem ter um afastamento. As bordas do tipo \textit{outline} são definidas pela propriedade \var{outline}, que pode receber valores como largura, estilo e cor. O código \ref{outline-exemplo} mostra um exemplo de como definir a borda do tipo \textit{outline} para um elemento.
 
-\begin{csscode}{Exemplo de uso da propriedade \texttt{outline}.}{outline-exemplo}
+\begin{csscode}{Exemplo de uso da propriedade \var{outline}.}{outline-exemplo}
 p {
     outline: 2px dashed blue;
     outline-offset: 10px; /* afastamento da borda */
@@ -345,37 +345,37 @@ A principal diferença entre as bordas normais e as bordas do tipo \textit{outli
 
 \section{Margens Interna e Externa}
 
-As propriedades de configuração de margens são \texttt{margin} (externa) e \texttt{padding} (externa). Elas são essenciais para definir a distância entre os elementos HTML em uma página web. É importante entender a diferença entre elas e os possíveis valores que podem ser usados.
+As propriedades de configuração de margens são \var{margin} (externa) e \var{padding} (externa). Elas são essenciais para definir a distância entre os elementos HTML em uma página web. É importante entender a diferença entre elas e os possíveis valores que podem ser usados.
 
-A propriedade \texttt{margin} define a margem em torno do elemento. Os valores podem ser definidos para as margens superior, inferior, esquerda e direita usando as propriedades \texttt{margin-top}, \texttt{margin-bottom}, \texttt{margin-left} e \texttt{margin-right}, respectivamente. 
+A propriedade \var{margin} define a margem em torno do elemento. Os valores podem ser definidos para as margens superior, inferior, esquerda e direita usando as propriedades \var{margin-top}, \var{margin-bottom}, \var{margin-left} e \var{margin-right}, respectivamente. 
 
-Os valores da margem podem ser especificados em \texttt{px} (pixels), \texttt{em} (relativos à fonte), \texttt{rem} (relativos ao tamanho da fonte do elemento pai), \texttt{\%} (porcentagem) ou \texttt{auto} (para centralizar o elemento na tela). Por exemplo, o código \ref{exemploMargin} mostra como definir uma margem de 10 pixels em torno de um elemento.
+Os valores da margem podem ser especificados em \var{px} (pixels), \var{em} (relativos à fonte), \var{rem} (relativos ao tamanho da fonte do elemento pai), \var{\%} (porcentagem) ou \var{auto} (para centralizar o elemento na tela). Por exemplo, o código \ref{exemploMargin} mostra como definir uma margem de 10 pixels em torno de um elemento.
 
-\begin{csscode}{Exemplo de uso da propriedade \texttt{margin}}{exemploMargin}
+\begin{csscode}{Exemplo de uso da propriedade \var{margin}}{exemploMargin}
 div {
     margin: 10px;
 }
 \end{csscode}
 
-Neste exemplo \ref{exemploMargin}, a propriedade \texttt{margin} é definida com um valor de 10 pixels, o que significa que a margem em torno do elemento \texttt{div} será de 10 pixels em todas as direções.
+Neste exemplo \ref{exemploMargin}, a propriedade \var{margin} é definida com um valor de 10 pixels, o que significa que a margem em torno do elemento \var{div} será de 10 pixels em todas as direções.
 
-A propriedade \texttt{padding}, por sua vez, define a margem interna do elemento. Os valores podem ser definidos para a margem superior, inferior, esquerda e direita usando as propriedades \texttt{padding-top}, \texttt{padding-bottom}, \texttt{padding-left} e \texttt{padding-right}, respectivamente. Os valores podem ser especificados da mesma forma que a propriedade \texttt{margin}. Por exemplo, o código \ref{exemploPadding} mostra como definir uma margem interna de 10 pixels dentro de um elemento.
+A propriedade \var{padding}, por sua vez, define a margem interna do elemento. Os valores podem ser definidos para a margem superior, inferior, esquerda e direita usando as propriedades \var{padding-top}, \var{padding-bottom}, \var{padding-left} e \var{padding-right}, respectivamente. Os valores podem ser especificados da mesma forma que a propriedade \var{margin}. Por exemplo, o código \ref{exemploPadding} mostra como definir uma margem interna de 10 pixels dentro de um elemento.
 
-\begin{csscode}{Exemplo de margem interna com propriedade \texttt{padding}.}{exemploPadding}
+\begin{csscode}{Exemplo de margem interna com propriedade \var{padding}.}{exemploPadding}
 div {
     padding: 10px;
 }
 \end{csscode}
 
-Neste exemplo \ref{exemploPadding}, a propriedade \texttt{padding} é definida com um valor de 10 pixels, o que significa que a margem interna do elemento \texttt{div} será de 10 pixels em todas as direções. É importante notar que as margens interna e externa podem afetar o leiaute da página, especialmente quando usados em conjunto com outros elementos HTML. 
+Neste exemplo \ref{exemploPadding}, a propriedade \var{padding} é definida com um valor de 10 pixels, o que significa que a margem interna do elemento \var{div} será de 10 pixels em todas as direções. É importante notar que as margens interna e externa podem afetar o leiaute da página, especialmente quando usados em conjunto com outros elementos HTML. 
 
-Em resumo, as propriedades \texttt{margin} e \texttt{padding} são importantes para definir a distância entre os elementos HTML em uma página web. Os valores podem ser definidos usando uma das unidades de medida ou o valor \texttt{auto}, dependendo da necessidade. Ao usar essas propriedades, é importante considerar como elas afetam o leiaute da página e usá-las com moderação.
+Em resumo, as propriedades \var{margin} e \var{padding} são importantes para definir a distância entre os elementos HTML em uma página web. Os valores podem ser definidos usando uma das unidades de medida ou o valor \var{auto}, dependendo da necessidade. Ao usar essas propriedades, é importante considerar como elas afetam o leiaute da página e usá-las com moderação.
 
-\subsection{Valor Automático da Propriedade \texttt{margin}}
+\subsection{Valor Automático da Propriedade \var{margin}}
 
-O valor \texttt{auto} da propriedade \texttt{margin} é usado para centralizar um elemento na tela. Quando a margem é definida como \texttt{auto}, o navegador define automaticamente um valor para a margem, a fim de centralizar o elemento na tela. Por exemplo, o código \ref{exemploMarginAuto} mostra como centralizar um elemento \texttt{div} na tela usando a propriedade \texttt{margin} com o valor \texttt{auto}.
+O valor \var{auto} da propriedade \var{margin} é usado para centralizar um elemento na tela. Quando a margem é definida como \var{auto}, o navegador define automaticamente um valor para a margem, a fim de centralizar o elemento na tela. Por exemplo, o código \ref{exemploMarginAuto} mostra como centralizar um elemento \var{div} na tela usando a propriedade \var{margin} com o valor \var{auto}.
 
-\begin{csscode}{Exemplo de \texttt{margin} com valor \texttt{auto}.}{exemploMarginAuto}
+\begin{csscode}{Exemplo de \var{margin} com valor \var{auto}.}{exemploMarginAuto}
 div {
     margin: auto;
     width: 50%;
@@ -384,11 +384,11 @@ div {
 }
 \end{csscode}
 
-Neste exemplo \ref{exemploMarginAuto}, a propriedade \texttt{margin} é definida como \texttt{auto}, o que significa que o navegador definirá automaticamente o valor da margem para centralizar \textbf{horizontalmente} o elemento \texttt{div} na tela. Além disso, a largura do elemento é definida como 50\%, a borda é definida como 1 pixel, estilo sólido e cor preta. A margem interna é definida como 10 pixels.
+Neste exemplo \ref{exemploMarginAuto}, a propriedade \var{margin} é definida como \var{auto}, o que significa que o navegador definirá automaticamente o valor da margem para centralizar \textbf{horizontalmente} o elemento \var{div} na tela. Além disso, a largura do elemento é definida como 50\%, a borda é definida como 1 pixel, estilo sólido e cor preta. A margem interna é definida como 10 pixels.
 
-É importante notar que o valor \texttt{auto} da propriedade \texttt{margin} só funciona em elementos com uma largura definida, como um elemento com a propriedade \texttt{width} definida. Caso contrário, o navegador não terá como calcular a margem necessária para centralizar o elemento na tela.
+É importante notar que o valor \var{auto} da propriedade \var{margin} só funciona em elementos com uma largura definida, como um elemento com a propriedade \var{width} definida. Caso contrário, o navegador não terá como calcular a margem necessária para centralizar o elemento na tela.
 
-Em resumo, o valor \texttt{auto} da propriedade \texttt{margin} é usado para centralizar um elemento na tela. É importante definir uma largura para o elemento para que o navegador possa calcular a margem necessária para centralizá-lo corretamente.
+Em resumo, o valor \var{auto} da propriedade \var{margin} é usado para centralizar um elemento na tela. É importante definir uma largura para o elemento para que o navegador possa calcular a margem necessária para centralizá-lo corretamente.
 
 \section{Exercícios Propostos}
 
@@ -419,7 +419,7 @@ Defina uma cor hexadecimal (\#FFA500) para o fundo de um elemento usando a propr
 \end{exercise}
 
 \begin{exercise}
-Defina uma cor nomeada (\texttt{green}) para o texto de um elemento usando a propriedade \var{color}.
+Defina uma cor nomeada (\var{green}) para o texto de um elemento usando a propriedade \var{color}.
 \end{exercise}
 
 \begin{exercise}
@@ -435,7 +435,7 @@ Defina uma imagem de fundo para um elemento. A imagem deve ter a URL ``imagem.jp
 \end{exercise}
 
 \begin{exercise}
-Defina uma cor de fundo para um elemento. A cor deve ser um tom de verde claro (\texttt{\#90EE90}).
+Defina uma cor de fundo para um elemento. A cor deve ser um tom de verde claro (\var{\#90EE90}).
 \end{exercise}
 
 \begin{exercise}
@@ -451,7 +451,7 @@ Defina uma imagem de fundo para um elemento. A imagem deve ter a URL ``imagem.jp
 \end{exercise}
 
 \begin{exercise}
-Defina uma cor de fundo para um elemento. A cor deve ser um tom de cinza escuro (\texttt{\#A9A9A9}).
+Defina uma cor de fundo para um elemento. A cor deve ser um tom de cinza escuro (\var{\#A9A9A9}).
 \end{exercise}
 
 \begin{exercise}

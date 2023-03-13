@@ -1,55 +1,193 @@
-\chapter{Introdução à FastAPI}
+\section{Pseudo-Seletores CSS}
 
-\section{Conceito de Web API}
+Pseudo-seletores são utilizados para aplicar estilos a elementos com base em um estado ou característica específica, sem precisar modificar o HTML. Nesta seção, vamos explorar alguns pseudo-seletores comuns do CSS e como utilizá-los.
 
-\section{Exemplos}
+\subsection{:after}
 
-\subsection{Equation Example}\index{Examples!Equation}
+O pseudo-seletor \var{:after} é utilizado para adicionar conteúdo após o conteúdo de um elemento. É comumente usado para adicionar elementos decorativos, como ícones e setas, a elementos de navegação. O código \ref{exemplo-after} mostra como adicionar uma seta após um link.
 
-\begin{example} % Specify a name/title in square brackets, or leave them out for no title
-	Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
-	\begin{equation}
-	f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
-	& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
-	\end{equation}
-	The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\mathopen{]}0\,;5/2-\sqrt{2}\mathclose{[}$.
-\end{example}
+\begin{csscode}{Adicionando uma seta após um link.}{exemplo-after}
+a:after {
+    content: " >>";
+}
+\end{csscode}
 
-\subsection{Text Example}\index{Examples!Text}
+Neste exemplo \ref{exemplo-after}, o conteúdo de \var{:after} é definido como uma seta usando a propriedade \var{content}. A seta é adicionada após o conteúdo do link.
 
-\begin{example}[Example name] % Specify a name/title in square brackets, or leave them out for no title
-	Aliquam arcu turpis, ultrices sed luctus ac, vehicula id metus. Morbi eu feugiat velit, et tempus augue. Proin ac mattis tortor. Donec tincidunt, ante rhoncus luctus semper, arcu lorem lobortis justo, nec convallis ante quam quis lectus. Aenean tincidunt sodales massa, et hendrerit tellus mattis ac. Sed non pretium nibh. Donec cursus maximus luctus. Vivamus lobortis eros et massa porta porttitor.
-\end{example}
+\subsection{:before}
 
-%------------------------------------------------
+O pseudo-seletor \var{:before} é utilizado para adicionar conteúdo antes do conteúdo de um elemento. É comumente usado para adicionar elementos decorativos, como ícones e setas, a elementos de navegação.O código \ref{exemplo-before} mostra como adicionar uma seta antes de um link.
 
-\section{Exercícios}
+\begin{csscode}{Adicionando uma seta antes de um link.}{exemplo-before}
+a:before {
+    content: " >>";
+}
+\end{csscode}
 
-\begin{exercise} % Specify a name/title in square brackets, or leave them out for no title
-	This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
+Neste exemplo \ref{exemplo-before}, o conteúdo de \var{:before} é definido como uma seta usando a propriedade \var{content}. A seta é adicionada antes do conteúdo do link.
 
-\begin{exercise} % Specify a name/title in square brackets, or leave them out for no title
-	This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
+\subsection{:first-letter}
 
-\begin{exercise} % Specify a name/title in square brackets, or leave them out for no title
-	This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
+O pseudo-seletor \var{:first-letter} é utilizado para aplicar estilos apenas à primeira letra de um elemento. É comumente usado para adicionar destaque a letras iniciais em textos. O código \ref{exemplo-first-letter} mostra como aplicar um estilo de cor diferente à primeira letra de um parágrafo.
 
-\begin{exercise} % Specify a name/title in square brackets, or leave them out for no title
-	This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
-%------------------------------------------------
+\begin{csscode}{Aplicando estilo à primeira letra de um parágrafo.}{exemplo-first-letter}
+    p:first-letter {
+    color: red;
+}
+\end{csscode}
 
-\section{Algoritmos}
+Neste exemplo \ref{exemplo-first-letter}, o pseudo-seletor \var{:first-letter} é usado para aplicar a cor vermelha apenas à primeira letra do parágrafo.
 
-\begin{minted}{python}
-nome = "João"
-idade = 30
-\end{minted}
+\subsection{:first-line}
 
-\section{Problemas}
+O pseudo-seletor \var{:first-line} é utilizado para aplicar estilos apenas à primeira linha de um elemento. É comumente usado para definir estilos para o início de um parágrafo ou título. O código \ref{exemplo-first-line} mostra como aplicar um estilo de cor diferente à primeira linha de um parágrafo.
 
-\begin{problem} % Specify a name/title in square brackets, or leave them out for no title
-\end{problem}
+\begin{csscode}{Aplicando estilo à primeira linha de um parágrafo.}{exemplo-first-line}
+p:first-line {
+    color: blue;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-first-line}, o pseudo-seletor \var{:first-line} é usado para aplicar a cor azul apenas à primeira linha do parágrafo.
+
+\subsection{li::marker}
+
+O pseudo-seletor \var{li::marker} é utilizado para selecionar o marcador de um elemento de lista \var{<li>}. O marcador é a parte do elemento de lista que aparece antes do conteúdo do elemento. O código \ref{exemplo-li-marker} mostra como estilizar o marcador de uma lista com círculos vermelhos.
+
+\begin{csscode}{Estilizando o marcador de uma lista.}{exemplo-li-marker}
+li::marker {
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0.5em;
+    background-color: red;
+    border-radius: 50%;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-li-marker}, o pseudo-seletor \var{li::marker} é usado para selecionar o marcador de uma lista e aplicar um estilo de círculo vermelho a ele. A propriedade \var{content} é usada para remover o conteúdo padrão do marcador. Em seguida, a propriedade \var{display} é usada para exibir o marcador como um bloco em linha. As propriedades \var{width}, \var{height} e \var{border-radius} são usadas para definir o tamanho e a forma do círculo. A propriedade \var{margin-right} é usada para adicionar um espaço entre o marcador e o conteúdo do elemento de lista.
+
+\subsection{Operadores \var{\textasciicircum=} e \var{\$=}}
+
+Os operadores \var{\textasciicircum=} e \var{\$=} são utilizados para selecionar elementos cujos atributos começam com algo e que terminam com algo, respectivamente. O código \ref{exemplo-href} mostra como estilizar links que começam com \texttt{http} em negrito e links que terminam com \texttt{.pdf} em vermelho.
+
+\begin{csscode}{Estilizando links específicos.}{exemplo-href}
+a[href^="http"] {
+    font-weight: bold;
+}
+
+a[href$=".pdf"] {
+    color: red;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-href}, os pseudo-seletores \var{[href\textasciicircum="http"]} e \var{[href\$=".pdf"]} são usados para selecionar links que começam com \texttt{http} e links que terminam com \texttt{.pdf}, respectivamente. Em seguida, o estilo é aplicado a cada um dos links selecionados.
+
+\subsection{:not}
+
+O pseudo-seletor \var{:not} é utilizado para selecionar elementos que não correspondem a um seletor específico. Ele é especialmente útil quando se deseja selecionar um conjunto de elementos, exceto um ou alguns específicos. O código \ref{exemplo-not} mostra como estilizar todos os links de um menu, exceto o primeiro.
+
+\begin{csscode}{Estilizando todos os links de um menu, exceto o primeiro.}{exemplo-not}
+    nav a:not(:first-of-type) {
+    color: blue;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-not}, o pseudo-seletor \var{:not} é usado para selecionar todos os links de um menu, exceto o primeiro. Em seguida, o estilo é aplicado a cada um dos links selecionados.
+
+\subsection{:first-of-type e :not(:first-of-type)}
+
+Os pseudo-seletores \var{:first-of-type} e \var{:not(:first-of-type)} são utilizados para selecionar o primeiro elemento de um tipo específico e todos os elementos desse tipo, exceto o primeiro, respectivamente. O código \ref{exemplo-first-of-type} mostra como estilizar o primeiro parágrafo de um artigo em negrito e todos os outros parágrafos em itálico.
+
+\begin{csscode}{Estilizando o primeiro parágrafo de um artigo.}{exemplo-first-of-type}
+article p:first-of-type {
+    font-weight: bold;
+}
+
+article p:not(:first-of-type) {
+    font-style: italic;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-first-of-type}, o pseudo-seletor \var{:first-of-type} é usado para selecionar o primeiro parágrafo do artigo e aplicar um estilo de negrito a ele. Em seguida, o pseudo-seletor \var{:not(:first-of-type)} é usado para selecionar todos os outros parágrafos do artigo e aplicar um estilo de itálico a eles.
+
+\subsection{input[type="tipo"] e input:focus}
+
+Os pseudo-seletores \var{input[type="tipo"]} e \var{input:focus} são utilizados para selecionar elementos \var{<input>} com um tipo específico e o elemento \var{<input>} que está com o foco, respectivamente. O código \ref{exemplo-input} mostra como estilizar um campo de entrada de texto quando ele está com foco e um campo de entrada de senha.
+
+\begin{csscode}{Estilizando campos de entrada de texto.}{exemplo-input}
+input[type="text"]:focus {
+    border-color: blue;
+}
+
+input[type="password"] {
+    border: 1px solid black;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-input}, o pseudo-seletor \var{input[type="text"]:focus} é usado para selecionar um campo de entrada de texto quando ele está com foco e aplicar um estilo de borda azul a ele. Em seguida, o pseudo-seletor \var{input[type="password"]} é usado para selecionar um campo de entrada de senha e aplicar um estilo de borda preta a ele.
+
+\subsection{input:required, input:valid e input:invalid}
+
+Os pseudo-seletores \var{input:required}, \var{input:valid} e \var{input:invalid} são utilizados para selecionar elementos \var{<input>} que são obrigatórios, válidos e inválidos, respectivamente. O código \ref{exemplo-input-validacao} mostra como estilizar um campo de entrada de texto que é obrigatório, válido e inválido.
+
+\begin{csscode}{Estilizando campos de entrada de texto com validação.}{exemplo-input-validacao}
+input:required {
+    background-color: yellow;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-input-validacao}, o pseudo-seletor \var{input:required} é usado para selecionar um campo de entrada de texto que é obrigatório e aplicar um estilo de fundo amarelo a ele. Em seguida, o pseudo-seletor \var{input:valid} é usado para selecionar um campo de entrada de texto que é válido e aplicar um estilo de borda verde a ele. Finalmente, o pseudo-seletor \var{input:invalid} é usado para selecionar um campo de entrada de texto que é inválido e aplicar um estilo de borda vermelha a ele.
+
+\subsection{input:in-range, input:out-of-range, input:disabled, input:checked, input:optional, input:readonly e input:read-write}
+
+Os pseudo-seletores \var{input:in-range}, \var{input:out-of-range}, \var{input:disabled}, \var{input:checked}, \var{input:optional}, \var{input:readonly} e \var{input:read-write} são utilizados para selecionar elementos \var{<input>} que estão em um determinado estado, como habilitado, desabilitado, marcado, etc.
+
+O código \ref{exemplo-input-estados} mostra como estilizar um campo de entrada de número que está habilitado, desabilitado, com um valor dentro e fora do intervalo, marcado e desmarcado.
+
+\begin{csscode}{Estilizando campos de entrada de número com diferentes estados.}{exemplo-input-estados}
+input:enabled {
+    color: black;
+}
+
+input:disabled {
+    color: gray;
+}
+
+input:in-range {
+    border-color: green;
+}
+
+input:out-of-range {
+    border-color: red;
+}
+
+input:checked {
+    background-color: blue;
+}
+
+input:optional {
+    border-color: yellow;
+}
+
+input:readonly {
+    background-color: lightgray;
+}
+
+input:read-write {
+    background-color: white;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-input-estados}, o pseudo-seletor \var{input:enabled} é usado para selecionar um campo de entrada de número que está habilitado e aplicar um estilo de cor preta a ele. Em seguida, o pseudo-seletor \var{input:disabled} é usado para selecionar um campo de entrada de número que está desabilitado e aplicar um estilo de cor cinza a ele. Em seguida, o pseudo-seletor \var{input:in-range} é usado para selecionar um campo de entrada de número que está dentro do intervalo e aplicar um estilo de borda verde a ele. O pseudo-seletor \var{input:out-of-range} é usado para selecionar um campo de entrada de número que está fora do intervalo e aplicar um estilo de borda vermelha a ele. O pseudo-seletor \var{input:checked} é usado para selecionar um campo de entrada de número que está marcado e aplicar um estilo de fundo azul a ele. O pseudo-seletor \var{input:optional} é usado para selecionar um campo de entrada de número que é opcional e aplicar um estilo de borda amarela a ele. O pseudo-seletor \var{input:readonly} é usado para selecionar um campo de entrada de número que é somente leitura e aplicar um estilo de fundo cinza claro a ele. Por fim, o pseudo-seletor \var{input:read-write} é usado para selecionar um campo de entrada de número que é de leitura e escrita e aplicar um estilo de fundo branco a ele.
+
+Esta seção apresentou alguns dos pseudo-seletores mais comuns em CSS, com exemplos de código e situações de uso para cada um deles. É importante lembrar de utilizar os comandos de latex \var{NomeDoTermo} para os termos em inglês e palavras-reservadas da CSS, bem como utilizar as referências com os códigos dos exemplos para facilitar a compreensão do leitor.

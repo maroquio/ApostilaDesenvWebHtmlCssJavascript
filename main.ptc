@@ -1,164 +1,205 @@
 \babel@toc {portuguese}{}\relax 
 \ttl@starttoc {part@1}
-\contentsline {part}{\numberline {I}Parte I: HTML}{13}{part.1}%
-\contentsline {chapter}{\numberline {1}Introdução}{15}{chapter.1}%
-\contentsline {section}{\numberline {1.1}O Funcionamento de um Site}{15}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Páginas Estáticas e Dinâmicas}{18}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}O Conceito de Requisição de Página}{20}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Um Pouco Mais Sobre Javascript}{24}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Exercícios Propostos}{25}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Considerações Sobre o Capítulo}{26}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Documentos HTML e CSS}{27}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Estrutura de Uma Página HTML}{27}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Estrutura de Um Documento CSS}{32}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Associando um Documento CSS a um Documento HTML}{33}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Exercícios Propostos}{35}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Considerações Sobre o Capítulo}{35}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Textos}{37}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Títulos e Subtítulos}{37}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Parágrafos e Quebras}{40}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Texto Pré-Formatado}{41}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Texto de Código-Fonte}{41}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Links}{42}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Local de Abertura do Link}{43}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Formatação de Texto \textit {Inline}}{44}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Citações}{46}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Exercícios Propostos}{47}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Considerações Sobre o Capítulo}{48}{section.3.9}%
-\contentsline {chapter}{\numberline {4}Listas e Tabelas}{49}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Listas}{49}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Listas Não Ordenadas}{50}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Listas Ordenadas}{51}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Listas de Definições}{52}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Tabelas}{53}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Tabelas Simples}{53}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Cabeçalho, Corpo e Rodapé}{55}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Mesclagem de Linhas e Colunas}{56}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Exercícios Propostos}{60}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Considerações Sobre o Capítulo}{62}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Imagens}{63}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Adicionando Imagens a Uma Página HTML}{63}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Formatos de Imagem}{65}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}PNG (\textit {Portable Network Graphics})}{65}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}JPEG (\textit {Joint Photographic Experts Group})}{66}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}GIF (\textit {Graphics Interchange Format})}{66}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}SVG (\textit {Scalable Vector Graphics})}{67}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Figuras e Legendas}{67}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Imagens Responsivas}{68}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Mapas de Imagens}{70}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Um Mapa de Imagem Simples}{70}{subsection.5.5.1}%
-\contentsline {section}{\numberline {5.6}Imagens Como Links}{73}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Exercícios Propostos}{74}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Considerações Sobre o Capítulo}{75}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Áudio e Vídeo}{77}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Inserindo Áudio em Uma Página HTML}{78}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Uso do Elemento \large {\texttt {<audio>}}\normalsize }{78}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Inserindo Arquivos de Áudio em Diferentes Formatos}{78}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Formatos de Arquivos Suportados Pelos Navegadores}{79}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Atributos do Elemento \large {\texttt {<audio>}}\normalsize }{79}{subsection.6.1.4}%
-\contentsline {subsubsection}{\numberline {6.1.4.1}Atributo \large {\texttt {controls}}\normalsize }{79}{subsubsection.6.1.4.1}%
-\contentsline {subsubsection}{\numberline {6.1.4.2}Atributo \large {\texttt {autoplay}}\normalsize }{79}{subsubsection.6.1.4.2}%
-\contentsline {subsubsection}{\numberline {6.1.4.3}Atributo \large {\texttt {loop}}\normalsize }{80}{subsubsection.6.1.4.3}%
-\contentsline {subsubsection}{\numberline {6.1.4.4}Atributo \large {\texttt {muted}}\normalsize }{80}{subsubsection.6.1.4.4}%
-\contentsline {subsubsection}{\numberline {6.1.4.5}Atributo \large {\texttt {preload}}\normalsize }{80}{subsubsection.6.1.4.5}%
-\contentsline {section}{\numberline {6.2}Inserindo Vídeo em Uma Página HTML}{81}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Uso do Elemento \large {\texttt {<video>}}\normalsize }{81}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Inserindo Arquivos de Vídeo em Diferentes Formatos}{81}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Formatos de Arquivos Suportados Pelos Navegadores}{82}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Atributos do Elemento \large {\texttt {video}}\normalsize }{82}{subsection.6.2.4}%
-\contentsline {subsubsection}{\numberline {6.2.4.1}Atributo \large {\texttt {controls}}\normalsize }{82}{subsubsection.6.2.4.1}%
-\contentsline {subsubsection}{\numberline {6.2.4.2}Atributo \large {\texttt {muted}}\normalsize }{83}{subsubsection.6.2.4.2}%
-\contentsline {subsubsection}{\numberline {6.2.4.3}Atributo \large {\texttt {autoplay}}\normalsize }{83}{subsubsection.6.2.4.3}%
-\contentsline {subsubsection}{\numberline {6.2.4.4}Atributo \large {\texttt {loop}}\normalsize }{83}{subsubsection.6.2.4.4}%
-\contentsline {subsubsection}{\numberline {6.2.4.5}Atributo \large {\texttt {poster}}\normalsize }{84}{subsubsection.6.2.4.5}%
-\contentsline {subsection}{\numberline {6.2.5}Adicionando Legendas aos Vídeos}{84}{subsection.6.2.5}%
-\contentsline {subsubsection}{\numberline {6.2.5.1}O Arquivo de Legenda VTT}{85}{subsubsection.6.2.5.1}%
-\contentsline {section}{\numberline {6.3}Incorporando Vídeos do YouTube em Uma Página HTML}{87}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Usando \textit {iframe} para Incorporar Vídeo do YouTube}{87}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Personalizando a Reprodução de Vídeo do YouTube com Parâmetros de URL}{87}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}Exercícios Propostos}{88}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Considerações Sobre o Capítulo}{90}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Formulários}{91}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Criando um Formulário Básico}{91}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Enviando Dados de Formulários}{92}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Campos de Formulários}{93}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Campos de Texto Longo}{93}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Campos de E-mail e Senha}{93}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}\textit {Checkboxes}}{94}{subsection.7.3.3}%
-\contentsline {subsection}{\numberline {7.3.4}\textit {Radio Buttons}}{94}{subsection.7.3.4}%
-\contentsline {subsection}{\numberline {7.3.5}\textit {Selects}}{95}{subsection.7.3.5}%
-\contentsline {section}{\numberline {7.4}Validação de Formulários com Atributos HTML}{95}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Atributo \large {\texttt {required}}\normalsize }{95}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Atributos \large {\texttt {min}}\normalsize e \large {\texttt {max}}\normalsize }{96}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Atributo \large {\texttt {pattern}}\normalsize }{96}{subsection.7.4.3}%
-\contentsline {subsection}{\numberline {7.4.4}Atributos \large {\texttt {maxlength}}\normalsize e \large {\texttt {minlength}}\normalsize }{97}{subsection.7.4.4}%
-\contentsline {section}{\numberline {7.5}Tipos de Campos Avançados}{97}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Botão}{97}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Cor}{98}{subsection.7.5.2}%
-\contentsline {subsection}{\numberline {7.5.3}Data}{98}{subsection.7.5.3}%
-\contentsline {subsection}{\numberline {7.5.4}Data e Hora}{98}{subsection.7.5.4}%
-\contentsline {subsection}{\numberline {7.5.5}Arquivo}{99}{subsection.7.5.5}%
-\contentsline {subsection}{\numberline {7.5.6}Campo Oculto}{99}{subsection.7.5.6}%
-\contentsline {subsection}{\numberline {7.5.7}Imagem}{100}{subsection.7.5.7}%
-\contentsline {subsection}{\numberline {7.5.8}Mês}{100}{subsection.7.5.8}%
-\contentsline {subsection}{\numberline {7.5.9}Número}{100}{subsection.7.5.9}%
-\contentsline {subsection}{\numberline {7.5.10}Intervalo}{101}{subsection.7.5.10}%
-\contentsline {subsection}{\numberline {7.5.11}Botão de Redefinição}{101}{subsection.7.5.11}%
-\contentsline {subsection}{\numberline {7.5.12}Busca}{102}{subsection.7.5.12}%
-\contentsline {subsection}{\numberline {7.5.13}Telefone}{103}{subsection.7.5.13}%
-\contentsline {subsection}{\numberline {7.5.14}Horário}{103}{subsection.7.5.14}%
-\contentsline {subsection}{\numberline {7.5.15}URL}{103}{subsection.7.5.15}%
-\contentsline {subsection}{\numberline {7.5.16}Semana}{104}{subsection.7.5.16}%
-\contentsline {section}{\numberline {7.6}Exercícios Propostos}{104}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Considerações Sobre o Capítulo}{108}{section.7.7}%
+\contentsline {part}{\numberline {I}Parte I: HTML}{15}{part.1}%
+\contentsline {chapter}{\numberline {1}Introdução}{17}{chapter.1}%
+\contentsline {section}{\numberline {1.1}O Funcionamento de um Site}{17}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Páginas Estáticas e Dinâmicas}{20}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}O Conceito de Requisição de Página}{22}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Um Pouco Mais Sobre Javascript}{26}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Exercícios Propostos}{27}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Considerações Sobre o Capítulo}{28}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Documentos HTML e CSS}{29}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Estrutura de Uma Página HTML}{29}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Estrutura de Um Documento CSS}{34}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Associando um Documento CSS a um Documento HTML}{35}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Exercícios Propostos}{37}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Considerações Sobre o Capítulo}{37}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Textos}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Títulos e Subtítulos}{39}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Parágrafos e Quebras}{42}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Texto Pré-Formatado}{43}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Texto de Código-Fonte}{43}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Links}{44}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Local de Abertura do Link}{45}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Formatação de Texto \textit {Inline}}{46}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Citações}{48}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Exercícios Propostos}{49}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Considerações Sobre o Capítulo}{50}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Listas e Tabelas}{51}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Listas}{51}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Listas Não Ordenadas}{52}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Listas Ordenadas}{53}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Listas de Definições}{54}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Tabelas}{55}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Tabelas Simples}{55}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Cabeçalho, Corpo e Rodapé}{57}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Mesclagem de Linhas e Colunas}{58}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Exercícios Propostos}{62}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Considerações Sobre o Capítulo}{64}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Imagens}{65}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Adicionando Imagens a Uma Página HTML}{65}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Formatos de Imagem}{67}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}PNG (\textit {Portable Network Graphics})}{67}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}JPEG (\textit {Joint Photographic Experts Group})}{68}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}GIF (\textit {Graphics Interchange Format})}{68}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}SVG (\textit {Scalable Vector Graphics})}{69}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Figuras e Legendas}{69}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Imagens Responsivas}{70}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Mapas de Imagens}{72}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Um Mapa de Imagem Simples}{72}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.6}Imagens Como Links}{75}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Exercícios Propostos}{76}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Considerações Sobre o Capítulo}{77}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Áudio e Vídeo}{79}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Inserindo Áudio em Uma Página HTML}{80}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Uso do Elemento \large {\texttt {<audio>}}\normalsize }{80}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Inserindo Arquivos de Áudio em Diferentes Formatos}{80}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Formatos de Arquivos Suportados Pelos Navegadores}{81}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Atributos do Elemento \large {\texttt {<audio>}}\normalsize }{81}{subsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.1}Atributo \large {\texttt {controls}}\normalsize }{81}{subsubsection.6.1.4.1}%
+\contentsline {subsubsection}{\numberline {6.1.4.2}Atributo \large {\texttt {autoplay}}\normalsize }{81}{subsubsection.6.1.4.2}%
+\contentsline {subsubsection}{\numberline {6.1.4.3}Atributo \large {\texttt {loop}}\normalsize }{82}{subsubsection.6.1.4.3}%
+\contentsline {subsubsection}{\numberline {6.1.4.4}Atributo \large {\texttt {muted}}\normalsize }{82}{subsubsection.6.1.4.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.5}Atributo \large {\texttt {preload}}\normalsize }{82}{subsubsection.6.1.4.5}%
+\contentsline {section}{\numberline {6.2}Inserindo Vídeo em Uma Página HTML}{83}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Uso do Elemento \large {\texttt {<video>}}\normalsize }{83}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Inserindo Arquivos de Vídeo em Diferentes Formatos}{83}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Formatos de Arquivos Suportados Pelos Navegadores}{84}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Atributos do Elemento \large {\texttt {video}}\normalsize }{84}{subsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.4.1}Atributo \large {\texttt {controls}}\normalsize }{84}{subsubsection.6.2.4.1}%
+\contentsline {subsubsection}{\numberline {6.2.4.2}Atributo \large {\texttt {muted}}\normalsize }{85}{subsubsection.6.2.4.2}%
+\contentsline {subsubsection}{\numberline {6.2.4.3}Atributo \large {\texttt {autoplay}}\normalsize }{85}{subsubsection.6.2.4.3}%
+\contentsline {subsubsection}{\numberline {6.2.4.4}Atributo \large {\texttt {loop}}\normalsize }{85}{subsubsection.6.2.4.4}%
+\contentsline {subsubsection}{\numberline {6.2.4.5}Atributo \large {\texttt {poster}}\normalsize }{86}{subsubsection.6.2.4.5}%
+\contentsline {subsection}{\numberline {6.2.5}Adicionando Legendas aos Vídeos}{86}{subsection.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.5.1}O Arquivo de Legenda VTT}{87}{subsubsection.6.2.5.1}%
+\contentsline {section}{\numberline {6.3}Incorporando Vídeos do YouTube em Uma Página HTML}{89}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Usando \textit {iframe} para Incorporar Vídeo do YouTube}{89}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Personalizando a Reprodução de Vídeo do YouTube com Parâmetros de URL}{89}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Exercícios Propostos}{90}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Considerações Sobre o Capítulo}{92}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Formulários}{93}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Criando um Formulário Básico}{93}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Enviando Dados de Formulários}{94}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Campos de Formulários}{95}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Campos de Texto Longo}{95}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Campos de E-mail e Senha}{95}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}\textit {Checkboxes}}{96}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}\textit {Radio Buttons}}{96}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}\textit {Selects}}{97}{subsection.7.3.5}%
+\contentsline {section}{\numberline {7.4}Validação de Formulários com Atributos HTML}{97}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Atributo \large {\texttt {required}}\normalsize }{97}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Atributos \large {\texttt {min}}\normalsize e \large {\texttt {max}}\normalsize }{98}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Atributo \large {\texttt {pattern}}\normalsize }{98}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Atributos \large {\texttt {maxlength}}\normalsize e \large {\texttt {minlength}}\normalsize }{99}{subsection.7.4.4}%
+\contentsline {section}{\numberline {7.5}Tipos de Campos Avançados}{99}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Botão}{99}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Cor}{100}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Data}{100}{subsection.7.5.3}%
+\contentsline {subsection}{\numberline {7.5.4}Data e Hora}{100}{subsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.5.5}Arquivo}{101}{subsection.7.5.5}%
+\contentsline {subsection}{\numberline {7.5.6}Campo Oculto}{101}{subsection.7.5.6}%
+\contentsline {subsection}{\numberline {7.5.7}Imagem}{102}{subsection.7.5.7}%
+\contentsline {subsection}{\numberline {7.5.8}Mês}{102}{subsection.7.5.8}%
+\contentsline {subsection}{\numberline {7.5.9}Número}{102}{subsection.7.5.9}%
+\contentsline {subsection}{\numberline {7.5.10}Intervalo}{103}{subsection.7.5.10}%
+\contentsline {subsection}{\numberline {7.5.11}Botão de Redefinição}{103}{subsection.7.5.11}%
+\contentsline {subsection}{\numberline {7.5.12}Busca}{104}{subsection.7.5.12}%
+\contentsline {subsection}{\numberline {7.5.13}Telefone}{105}{subsection.7.5.13}%
+\contentsline {subsection}{\numberline {7.5.14}Horário}{105}{subsection.7.5.14}%
+\contentsline {subsection}{\numberline {7.5.15}URL}{105}{subsection.7.5.15}%
+\contentsline {subsection}{\numberline {7.5.16}Semana}{106}{subsection.7.5.16}%
+\contentsline {section}{\numberline {7.6}Exercícios Propostos}{106}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Considerações Sobre o Capítulo}{110}{section.7.7}%
 \ttl@stoptoc {part@1}
 \ttl@starttoc {part@2}
-\contentsline {part}{\numberline {II}Parte II: CSS}{109}{part.2}%
-\contentsline {chapter}{\numberline {8}Introdução}{111}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Associação de CSS a Documentos HTML}{112}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}CSS via Atributo \large {\texttt {style}}\normalsize }{112}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}CSS via Elemento \large {\texttt {<style>}}\normalsize }{112}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}CSS via Arquivos Externos}{113}{subsection.8.1.3}%
-\contentsline {section}{\numberline {8.2}Seletores CSS Básicos}{114}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Seletor por Tipo de Elemento}{115}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Seletor por Classe}{115}{subsection.8.2.2}%
-\contentsline {subsection}{\numberline {8.2.3}Seletor por ID}{116}{subsection.8.2.3}%
-\contentsline {section}{\numberline {8.3}Seletores Compostos}{116}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Seletor por Descendente}{116}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Seletor de Classe e Tipo de Elemento}{117}{subsection.8.3.2}%
-\contentsline {section}{\numberline {8.4}Exercícios Propostos}{117}{section.8.4}%
-\contentsline {chapter}{\numberline {9}Cores, Planos de Fundo, Bordas e Margens}{121}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Cores}{122}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Introdução às Cores em CSS}{122}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Formatos de Cores em CSS}{122}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.1.3}Gradientes}{123}{subsection.9.1.3}%
-\contentsline {section}{\numberline {9.2}Unidades de Medida}{124}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Pixels (px)}{124}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Pontos (pt)}{124}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Centímetros (cm) e Milímetros (mm)}{125}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}\textit {EM} e \textit {REM}}{125}{subsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.2.5}Porcentagem (\%)}{126}{subsection.9.2.5}%
-\contentsline {subsection}{\numberline {9.2.6}Outras unidades de medida}{126}{subsection.9.2.6}%
-\contentsline {section}{\numberline {9.3}Planos de Fundo}{127}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Propriedade \texttt {background-color}}{127}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Propriedade \texttt {background-image}}{127}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Propriedade \texttt {background-repeat}}{128}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Propriedade \texttt {background-position}}{128}{subsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.3.5}Propriedade \texttt {background-attachment}}{128}{subsection.9.3.5}%
-\contentsline {subsection}{\numberline {9.3.6}Propriedade \texttt {background-size}}{129}{subsection.9.3.6}%
-\contentsline {section}{\numberline {9.4}Bordas}{129}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Propriedade \texttt {border-color}}{129}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Propriedade \texttt {border-width}}{130}{subsection.9.4.2}%
-\contentsline {subsection}{\numberline {9.4.3}Propriedade \texttt {border-style}}{130}{subsection.9.4.3}%
-\contentsline {subsection}{\numberline {9.4.4}Propriedade \texttt {border-radius}}{130}{subsection.9.4.4}%
-\contentsline {subsection}{\numberline {9.4.5}Propriedades Multivaloradas}{131}{subsection.9.4.5}%
-\contentsline {subsection}{\numberline {9.4.6}Bordas do Tipo \textit {Outline}}{131}{subsection.9.4.6}%
-\contentsline {section}{\numberline {9.5}Margens Interna e Externa}{132}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Valor Automático da Propriedade \texttt {margin}}{133}{subsection.9.5.1}%
-\contentsline {section}{\numberline {9.6}Exercícios Propostos}{134}{section.9.6}%
-\contentsline {section}{\numberline {9.7}Considerações Sobre o Capítulo}{137}{section.9.7}%
-\contentsline {chapter}{\textcolor {darkgreen}{Bibliografia}}{139}{chapter*.34}%
-\contentsline {section}{Artigos}{139}{chapter*.34}%
-\contentsline {section}{Livros}{139}{chapter*.34}%
+\contentsline {part}{\numberline {II}Parte II: CSS}{111}{part.2}%
+\contentsline {chapter}{\numberline {8}Introdução}{113}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Associação de CSS a Documentos HTML}{114}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}CSS via Atributo \large {\texttt {style}}\normalsize }{114}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}CSS via Elemento \large {\texttt {<style>}}\normalsize }{114}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}CSS via Arquivos Externos}{115}{subsection.8.1.3}%
+\contentsline {section}{\numberline {8.2}Seletores CSS Básicos}{116}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Seletor por Tipo de Elemento}{117}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Seletor por Classe}{117}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Seletor por ID}{118}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Seletores Compostos}{118}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Seletor por Descendente}{118}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Seletor de Classe e Tipo de Elemento}{119}{subsection.8.3.2}%
+\contentsline {section}{\numberline {8.4}Exercícios Propostos}{119}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Cores, Planos de Fundo, Bordas e Margens}{123}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Cores}{124}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Introdução às Cores em CSS}{124}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Formatos de Cores em CSS}{124}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Gradientes}{125}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}Unidades de Medida}{126}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Pixels (px)}{126}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Pontos (pt)}{126}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Centímetros (cm) e Milímetros (mm)}{127}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}\textit {EM} e \textit {REM}}{127}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}Porcentagem (\%)}{128}{subsection.9.2.5}%
+\contentsline {subsection}{\numberline {9.2.6}Outras unidades de medida}{128}{subsection.9.2.6}%
+\contentsline {section}{\numberline {9.3}Planos de Fundo}{129}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Propriedade \large {\texttt {background-color}}\normalsize }{129}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Propriedade \large {\texttt {background-image}}\normalsize }{129}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Propriedade \large {\texttt {background-repeat}}\normalsize }{130}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Propriedade \large {\texttt {background-position}}\normalsize }{130}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Propriedade \large {\texttt {background-attachment}}\normalsize }{130}{subsection.9.3.5}%
+\contentsline {subsection}{\numberline {9.3.6}Propriedade \large {\texttt {background-size}}\normalsize }{131}{subsection.9.3.6}%
+\contentsline {section}{\numberline {9.4}Bordas}{131}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Propriedade \large {\texttt {border-color}}\normalsize }{131}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Propriedade \large {\texttt {border-width}}\normalsize }{132}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Propriedade \large {\texttt {border-style}}\normalsize }{132}{subsection.9.4.3}%
+\contentsline {subsection}{\numberline {9.4.4}Propriedade \large {\texttt {border-radius}}\normalsize }{132}{subsection.9.4.4}%
+\contentsline {subsection}{\numberline {9.4.5}Propriedades Multivaloradas}{133}{subsection.9.4.5}%
+\contentsline {subsection}{\numberline {9.4.6}Bordas do Tipo \textit {Outline}}{133}{subsection.9.4.6}%
+\contentsline {section}{\numberline {9.5}Margens Interna e Externa}{134}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Valor Automático da Propriedade \large {\texttt {margin}}\normalsize }{135}{subsection.9.5.1}%
+\contentsline {section}{\numberline {9.6}Exercícios Propostos}{136}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Considerações Sobre o Capítulo}{139}{section.9.7}%
+\contentsline {chapter}{\numberline {10}Fontes, Textos, Links e Listas}{141}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Fontes em CSS}{141}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Propriedade \large {\texttt {font-size}}\normalsize }{141}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Propriedade \large {\texttt {font-family}}\normalsize }{142}{subsection.10.1.2}%
+\contentsline {subsection}{\numberline {10.1.3}Propriedade \large {\texttt {font-style}}\normalsize }{142}{subsection.10.1.3}%
+\contentsline {subsection}{\numberline {10.1.4}Propriedade \large {\texttt {font-weight}}\normalsize }{142}{subsection.10.1.4}%
+\contentsline {subsection}{\numberline {10.1.5}Propriedade \large {\texttt {font-variant}}\normalsize }{143}{subsection.10.1.5}%
+\contentsline {subsection}{\numberline {10.1.6}Propriedade \large {\texttt {font}}\normalsize }{143}{subsection.10.1.6}%
+\contentsline {section}{\numberline {10.2}Textos}{143}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Propriedade \large {\texttt {text-align}}\normalsize }{144}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Propriedades \large {\texttt {direction}}\normalsize e \large {\texttt {unicode-bidi}}\normalsize }{144}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Propriedade \texttt {text-decoration}}{145}{subsection.10.2.3}%
+\contentsline {subsection}{\numberline {10.2.4}Propriedade \texttt {text-transform}}{145}{subsection.10.2.4}%
+\contentsline {subsection}{\numberline {10.2.5}Propriedade \texttt {text-indent}}{145}{subsection.10.2.5}%
+\contentsline {subsection}{\numberline {10.2.6}Propriedade \texttt {letter-spacing}}{146}{subsection.10.2.6}%
+\contentsline {subsection}{\numberline {10.2.7}Propriedade \texttt {line-height}}{146}{subsection.10.2.7}%
+\contentsline {subsection}{\numberline {10.2.8}Propriedade \texttt {word-spacing}}{146}{subsection.10.2.8}%
+\contentsline {subsection}{\numberline {10.2.9}Propriedade \texttt {white-space}}{147}{subsection.10.2.9}%
+\contentsline {subsection}{\numberline {10.2.10}Propriedade \texttt {text-shadow}}{147}{subsection.10.2.10}%
+\contentsline {section}{\numberline {10.3}Formatação de Links em CSS}{148}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Pseudo-Seletores \texttt {a:link} e \texttt {a:visited}}{148}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Pseudo-Seletores \texttt {a:hover} e \texttt {a:active}}{148}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Transformando um Link em Botão}{149}{subsection.10.3.3}%
+\contentsline {section}{\numberline {10.4}Listas}{150}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Tipo de Lista}{150}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}Imagem do Marcador}{150}{subsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.4.3}Posição do Marcador}{151}{subsection.10.4.3}%
+\contentsline {subsection}{\numberline {10.4.4}Margem, Preenchimento e Indentação}{151}{subsection.10.4.4}%
+\contentsline {section}{\numberline {10.5}Exercícios Propostos}{152}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Pseudo-Seletores CSS}{153}{section.10.6}%
+\contentsline {subsection}{\numberline {10.6.1}:after}{153}{subsection.10.6.1}%
+\contentsline {subsection}{\numberline {10.6.2}:before}{153}{subsection.10.6.2}%
+\contentsline {subsection}{\numberline {10.6.3}:first-letter}{153}{subsection.10.6.3}%
+\contentsline {subsection}{\numberline {10.6.4}:first-line}{154}{subsection.10.6.4}%
+\contentsline {subsection}{\numberline {10.6.5}li::marker}{154}{subsection.10.6.5}%
+\contentsline {subsection}{\numberline {10.6.6}Operadores \large {\texttt {\textasciicircum =}}\normalsize e \large {\texttt {\$=}}\normalsize }{155}{subsection.10.6.6}%
+\contentsline {subsection}{\numberline {10.6.7}:not}{155}{subsection.10.6.7}%
+\contentsline {subsection}{\numberline {10.6.8}:first-of-type e :not(:first-of-type)}{155}{subsection.10.6.8}%
+\contentsline {subsection}{\numberline {10.6.9}input[type="tipo"] e input:focus}{156}{subsection.10.6.9}%
+\contentsline {subsection}{\numberline {10.6.10}input:required, input:valid e input:invalid}{156}{subsection.10.6.10}%
+\contentsline {subsection}{\numberline {10.6.11}input:in-range, input:out-of-range, input:disabled, input:checked, input:optional, input:readonly e input:read-write}{157}{subsection.10.6.11}%
+\contentsline {chapter}{\textcolor {darkgreen}{Bibliografia}}{159}{chapter*.34}%
+\contentsline {section}{Artigos}{159}{chapter*.34}%
+\contentsline {section}{Livros}{159}{chapter*.34}%
 \ttl@stoptoc {part@2}
 \contentsfinish 

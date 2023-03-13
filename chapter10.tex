@@ -1,6 +1,379 @@
-\chapter{Manipulação de Bancos de Dados NoSQL}
+\chapter{Fontes, Textos, Links e Listas}
 
-\lipsum[1-1]
+A formatação de fontes, textos, links e listas é essencial para a apresentação de conteúdo em uma página web. Com o uso de CSS, podemos definir a aparência visual dos elementos do site de forma precisa e personalizada, tornando-o mais atraente e legível para o usuário.
+
+Ao entender as propriedades relacionadas à formatação de fontes, podemos escolher a fonte e o tamanho ideal para o texto, garantindo que ele seja legível e fácil de ler. Além disso, o uso correto de propriedades como \var{letter-spacing} e \var{line-height} pode ajudar a melhorar a legibilidade do texto, tornando-o mais confortável para o leitor.
+
+A formatação de links e listas também é importante, pois permite que o usuário identifique facilmente esses elementos na página. Com a personalização desses elementos, é possível criar uma hierarquia visual e destacar informações importantes. Portanto, o conhecimento sobre a formatação de fontes, textos, links e listas em CSS é fundamental para o desenvolvimento de um site atraente e funcional. As seções a seguir abordam esses tópicos.
+
+\section{Fontes em CSS}
+
+CSS permite que você personalize as fontes de texto de várias maneiras. As fontes são uma parte crítica de um site e podem afetar sua legibilidade, estética e até mesmo o desempenho da página. Nesta seção, vamos abordar as principais propriedades que controlam as fontes em CSS.
+
+\subsection{Propriedade \var{font-size}}
+
+A propriedade \var{font-size} define o tamanho da fonte em pixels, em pontos ou em outras unidades. É importante lembrar que o tamanho da fonte pode afetar a legibilidade e a aparência da página. É importante usar tamanhos de fonte adequados para diferentes partes da página, como cabeçalhos e parágrafos. O código \ref{exemplo_font_size} mostra um exemplo de como definir o tamanho da fonte.
+
+\begin{csscode}{Definindo o tamanho da fonte.}{exemplo_font_size}
+p {
+    font-size: 16px;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_font_size}, definimos o tamanho da fonte para 16 pixels para todos os elementos \var{<p>} da página.
+
+\subsection{Propriedade \var{font-family}}
+
+A propriedade \var{font-family} define a família de fontes usada no texto. É possível definir várias fontes alternativas para garantir que o texto seja exibido corretamente em diferentes navegadores e sistemas operacionais. O código \ref{exemplo_font_family} mostra um exemplo de como definir a família de fontes.
+
+\begin{csscode}{Definindo a família de fontes.}{exemplo_font_family}
+p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_font_family}, definimos a fonte \texttt{Helvetica Neue} como a fonte preferida, mas se ela não estiver disponível, usaremos \texttt{Helvetica} ou \texttt{Arial}, ou qualquer fonte \var{sans-serif} disponível.
+
+\subsection{Propriedade \var{font-style}}
+
+A propriedade \var{font-style} define o estilo da fonte, como normal, itálico ou obliqua. A fonte em itálico pode ser usada para enfatizar palavras-chave ou frases. O código \ref{exemplo_font_style} mostra um exemplo de como definir o estilo da fonte.
+
+\begin{csscode}{Definindo o estilo da fonte.}{exemplo_font_style}
+em {
+    font-style: italic;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_font_style}, definimos a fonte em itálico para todos os elementos \var{<em>} da página.
+
+\subsection{Propriedade \var{font-weight}}
+
+A propriedade \var{font-weight} define a espessura da fonte, como normal, negrito ou mais leve. É uma maneira fácil de enfatizar palavras-chave ou frases. O código \ref{exemplo_font_weight} mostra um exemplo de como definir a espessura da fonte.
+
+\begin{csscode}{Definindo a espessura da fonte.}{exemplo_font_weight}
+strong {
+    font-weight: bold;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_font_weight}, definimos a fonte em negrito para todos os elementos \var{<strong>} da página.
+
+\subsection{Propriedade \var{font-variant}}
+
+A propriedade \var{font-variant} define a variação da fonte, como \var{normal} ou \var{small-caps}. A variação \var{small-caps} é útil para enfatizar palavras ou frases, tornando-as em letras maiúsculas menores do que as maiúsculas normais. O código \ref{exemplo_font_variant} mostra um exemplo de como definir a variação da fonte.
+
+\begin{csscode}{Definindo a variação da fonte.}{exemplo_font_variant}
+p {
+    font-variant: small-caps;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_font_variant}, definimos a variação \var{small-caps} para todos os elementos \var{<p>} da página.
+
+\subsection{Propriedade \var{font}}
+
+A propriedade \var{font} é uma maneira abreviada de definir várias propriedades de fontes em uma única linha de código. Ela inclui a \var{font-size}, \var{font-family}, \var{font-style}, \var{font-weight} e \var{font-variant}. O código \ref{exemplo_font} mostra um exemplo de como usar a propriedade \var{font}.
+
+\begin{csscode}{Definindo várias propriedades de fontes.}{exemplo_font}
+h1 {
+    font: italic small-caps bold 24px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_font}, definimos várias propriedades de fontes para o elemento \var{<h1>}, incluindo \var{font-style} em itálico, \var{font-variant} em \var{small-caps}, \var{font-weight} em negrito, \var{font-size} em 24 pixels com uma altura de linha de 1,5 e \var{font-family} com a preferência para \var{Helvetica Neue}, seguida por \var{Helvetica}, \var{Arial} ou qualquer fonte \var{sans-serif} disponível.
+
+\section{Textos}
+
+Nesta seção, vamos explorar várias propriedades CSS que afetam o estilo de texto em um documento web. Veremos como essas propriedades afetam a aparência do texto e como elas podem ser usadas para criar efeitos visuais interessantes.
+
+\subsection{Propriedade \var{text-align}}
+
+A propriedade CSS \var{text-align} é usada para definir o alinhamento horizontal do texto em um elemento. Ele pode ter um dos seguintes valores: \var{left}, \var{right}, \var{center} e \var{justify}.
+
+O valor \var{left} alinha o texto à esquerda do elemento, \var{right} alinha à direita, \var{center} centraliza o texto no elemento e \var{justify} distribui o texto uniformemente na largura do elemento, criando espaçamento adicional entre as palavras, se necessário. O código \ref{text-align-example} mostra um exemplo de como usar a propriedade \var{text-align} para alinhar o texto à esquerda.
+
+\begin{csscode}{Exemplo de text-align.}{text-align-example}
+p {
+    text-align: left;
+}
+\end{csscode}
+
+Neste exemplo \ref{text-align-example}, a propriedade \var{text-align} é aplicada ao elemento \var{p}, fazendo com que todo o texto dentro do elemento seja alinhado à esquerda.
+
+\subsection{Propriedades \var{direction} e \var{unicode-bidi}}
+
+As propriedades CSS \var{direction} e \var{unicode-bidi} são usadas para controlar a direção do texto em um elemento. A propriedade \var{direction} pode ter um dos seguintes valores: \var{ltr} para esquerda-para-direita, ou \var{rtl} para direita-para-esquerda.
+
+A propriedade \var{unicode-bidi} é usada para controlar a direção do texto em elementos que contêm texto com diferentes direções de fluxo, como texto em árabe ou hebraico. Ele pode ter um dos seguintes valores: \var{normal} para texto esquerda-para-direita, ou \var{bidi-override} para texto direita-para-esquerda. O código \ref{direction-example} mostra um exemplo de como usar as propriedades \var{direction} e \var{unicode-bidi} para controlar a direção do texto em um elemento.
+
+\begin{csscode}{Exemplo de uso das propriedades \texttt{direction} e \texttt{unicode-bidi}.}{direction-example}
+h1 {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+\end{csscode}
+
+Neste exemplo \ref{direction-example}, as propriedades \var{direction} e \var{unicode-bidi} são aplicadas ao elemento \var{h1}, fazendo com que todo o texto dentro do elemento seja exibido da direita para a esquerda.
+
+\subsection{Propriedade \texttt{text-decoration}}
+
+A propriedade CSS \var{text-decoration} é usada para adicionar ou remover decorações de texto, como sublinhado, linhas através do texto ou sobrelinhado. Ele pode ter um dos seguintes valores: \var{none}, \var{underline}, \var{overline} e \var{line-through}. O código \ref{text-decoration-example} mostra um exemplo de como usar a propriedade \var{text-decoration} para adicionar uma linha através do texto.
+
+\begin{csscode}{Exemplo de uso da propriedade \texttt{text-decoration}.}{text-decoration-example}
+a {
+    text-decoration: line-through;
+}
+\end{csscode}
+
+Neste exemplo \ref{text-decoration-example}, a propriedade \var{text-decoration} é aplicada ao elemento \var{a}, fazendo com que todos os links no documento tenham uma linha através do texto.
+
+\subsection{Propriedade \texttt{text-transform}}
+
+A propriedade CSS \var{text-transform} é usada para transformar o texto em um elemento. Ele pode ter um dos seguintes valores: \var{none}, \var{uppercase}, \var{lowercase} e \var{capitalize}.
+
+O valor \var{uppercase} converte todo o texto em letras maiúsculas, \var{lowercase} converte todo o texto em letras minúsculas e \var{capitalize} converte a primeira letra de cada palavra em letra maiúscula. O código \ref{text-transform-example} mostra um exemplo de como usar a propriedade \var{text-transform} para transformar o texto em maiúsculas.
+
+\begin{csscode}{Exemplo de uso da propriedade \texttt{text-transform}.}{text-transform-example}
+h2 {
+    text-transform: uppercase;
+}
+\end{csscode}
+
+Neste exemplo \ref{text-transform-example}, a propriedade \var{text-transform} é aplicada ao elemento \var{h2}, fazendo com que todo o texto dentro do elemento seja convertido em letras maiúsculas.
+
+\subsection{Propriedade \texttt{text-indent}}
+
+A propriedade CSS \var{text-indent} é usada para definir a indentação da primeira linha de um bloco de texto. O valor pode ser especificado em pixels, em ou porcentagem. O código \ref{text-indent-example} mostra um exemplo de como usar a propriedade \var{text-indent} para criar uma indentação na primeira linha de um parágrafo.
+
+\begin{csscode}{Exemplo de uso da propriedade \texttt{text-indent}.}{text-indent-example}
+p {
+    text-indent: 20px;
+}
+\end{csscode}
+
+Neste exemplo \ref{text-indent-example}, a propriedade \var{text-indent} é aplicada ao elemento \var{p}, fazendo com que a primeira linha do parágrafo seja indentada em 20 pixels.
+
+\subsection{Propriedade \texttt{letter-spacing}}
+
+A propriedade CSS \var{letter-spacing} é usada para ajustar o espaçamento entre letras em um texto. Ele pode ter um valor positivo ou negativo para aumentar ou diminuir o espaçamento entre as letras. O código \ref{letter-spacing-example} mostra um exemplo de como usar a propriedade \var{letter-spacing} para aumentar o espaçamento entre letras em um elemento.
+
+\begin{csscode}{Exemplo de uso da propriedade letter-spacing.}{letter-spacing-example}
+h3 {
+    letter-spacing: 2px;
+}
+\end{csscode}
+
+Neste exemplo \ref{letter-spacing-example}, a propriedade \var{letter-spacing} é aplicada ao elemento \var{h3}, aumentando o espaçamento entre as letras em 2 pixels.
+
+\subsection{Propriedade \texttt{line-height}}
+
+A propriedade CSS \var{line-height} é usada para definir a altura da linha de um bloco de texto. O valor pode ser especificado em pixels, em ou porcentagem. O código \ref{line-height-example} mostra um exemplo de como usar a propriedade \var{line-height} para aumentar a altura da linha em um elemento.
+
+\begin{csscode}{Exemplo de uso da propriedade \texttt{line-height}.}{line-height-example}
+p {
+    line-height: 1.5em;
+}
+\end{csscode}
+
+Neste exemplo \ref{line-height-example}, a propriedade \var{line-height} é aplicada ao elemento \var{p}, aumentando a altura da linha para 1,5 vezes o tamanho da fonte.
+
+\subsection{Propriedade \texttt{word-spacing}}
+
+A propriedade CSS \var{word-spacing} é usada para ajustar o espaçamento entre palavras em um texto. Ele pode ter um valor positivo ou negativo para aumentar ou diminuir o espaçamento entre as palavras. O código \ref{word-spacing-example} mostra um exemplo de como usar a propriedade \var{word-spacing} para aumentar o espaçamento entre as palavras em um elemento.
+
+\begin{csscode}{Exemplo de uso da propriedade \texttt{word-spacing}.}{word-spacing-example}
+h4 {
+    word-spacing: 4px;
+}
+\end{csscode}
+
+Neste exemplo \ref{word-spacing-example}, a propriedade \var{word-spacing} é aplicada ao elemento \var{h4}, aumentando o espaçamento entre as palavras em 4 pixels.
+
+\subsection{Propriedade \texttt{white-space}}
+
+A propriedade CSS \var{white-space} é usada para definir como o espaço em branco é tratado em um elemento. Ele pode ter um dos seguintes valores: \var{normal}, \var{nowrap}, "pre" e \var{pre-wrap}.
+
+O valor \var{normal} trata vários espaços em branco como um único espaço, e quebra linhas automaticamente quando o texto atinge a largura máxima do elemento. O valor \var{nowrap} impede que o texto quebre em várias linhas. O valor \var{pre} preserva os espaços em branco e quebras de linha no texto exatamente como eles são no código-fonte. O valor \var{pre-wrap} preserva os espaços em branco e quebras de linha, mas permite que o texto seja quebrado em várias linhas.
+
+O código \ref{white-space-example} mostra um exemplo de como usar a propriedade \var{white-space} para preservar os espaços em branco e quebras de linha em um elemento.
+
+\begin{csscode}{Exemplo de uso da propriedade \texttt{white-space}.}{white-space-example}
+pre {
+    white-space: pre-wrap;
+}
+\end{csscode}
+
+Neste exemplo \ref{white-space-example}, a propriedade \var{white-space} é aplicada ao elemento \var{pre}, preservando os espaços em branco e quebras de linha no texto.
+
+\subsection{Propriedade \texttt{text-shadow}}
+
+A propriedade CSS \var{text-shadow} é usada para adicionar sombras ao texto em um elemento. Ele pode ter um ou mais valores, separados por vírgulas, que definem a posição da sombra, a cor da sombra e o tamanho da sombra. O código \ref{text-shadow-example} mostra um exemplo de como usar a propriedade \var{text-shadow} para adicionar uma sombra ao texto em um elemento.
+
+\begin{csscode}{Exemplo de uso da propriedade \texttt{text-shadow}.}{text-shadow-example}
+h5 {
+    text-shadow: 2px 2px #000000;
+}
+\end{csscode}
+
+Neste exemplo \ref{text-shadow-example}, a propriedade \var{text-shadow} é aplicada ao elemento \var{h5}, adicionando uma sombra preta de 2 pixels de tamanho à direita e abaixo do texto.
+
+\section{Formatação de Links em CSS}
+
+Os links são elementos importantes em uma página web, pois permitem que o usuário navegue pelo conteúdo. Porém, é possível ir além da formatação padrão dos links e criar efeitos visuais e de interatividade com CSS. Nesta seção, vamos explorar algumas técnicas para estilizar links usando CSS.
+
+\subsection{Pseudo-Seletores \texttt{a:link} e \texttt{a:visited}}
+
+Os pseudo-seletores \texttt{a:link} e \texttt{a:visited} são usados para definir a aparência dos links que ainda não foram visitados e dos links que já foram visitados, respectivamente. É possível personalizar a cor do texto, a cor do fundo, a borda, entre outras propriedades.
+
+O código \ref{exemplo-link-visitado} mostra um exemplo de formatação de links visitados.
+
+\begin{csscode}{Formatação de links visitados.}{exemplo-link-visitado}
+a:visited {
+    color: #999;
+    text-decoration: line-through;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-link-visitado}, definimos que os links visitados terão a cor do texto cinza escuro (\#999) e uma linha atravessando o texto (\texttt{text-decoration: line-through}).
+
+\subsection{Pseudo-Seletores \texttt{a:hover} e \texttt{a:active}}
+
+Os pseudo-seletores \texttt{a:hover} e \texttt{a:active} são usados para definir a aparência dos links quando o usuário passa o mouse sobre eles e quando eles estão sendo clicados, respectivamente. É possível personalizar a cor do texto, a cor do fundo, a borda, entre outras propriedades.
+
+O código \ref{exemplo-hover-active} mostra um exemplo de formatação de links quando o usuário passa o mouse sobre eles e quando eles estão sendo clicados.
+
+\begin{csscode}{Formatação de links com hover e active.}{exemplo-hover-active}
+a:hover {
+    color: #000;
+    background-color: #ff0;
+}
+
+a:active {
+    color: #fff;
+    background-color: #f00;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-hover-active}, definimos que quando o usuário passar o mouse sobre o link, a cor do texto será preta (\#000) e o fundo será amarelo (\#ff0). Quando o link estiver sendo clicado, a cor do texto será branca (\#fff) e o fundo será vermelho (\#f00).
+
+\subsection{Transformando um Link em Botão}
+
+Outra técnica interessante é transformar um link em um botão, adicionando bordas, fundo e espaçamento. O código \ref{exemplo-link-botao} mostra um exemplo de transformação de um link em botão.
+
+\begin{csscode}{Transformando um link em botão.}{exemplo-link-botao}
+a.button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-align: center;
+    background-color: #f00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5em;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+}
+
+a.button:hover {
+    background-color: rgb(201, 0, 0);
+}
+
+a.button:active {
+    position: relative;
+    top: 0.1em;
+    left: 0.1em;
+    box-shadow: none;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo-link-botao}, definimos uma classe \var{button} para o link e adicionamos propriedades para exibir o link como um botão, incluindo margem interna (\texttt{padding}), alinhamento de texto (\texttt{text-align}), cor de fundo (\texttt{background-color}), cor do texto (\texttt{color}), remoção de sublinhado (\texttt{text-decoration: none}), arredondamento de bordas (\texttt{border-radius}) e sombra (\texttt{box-shadow}).
+
+Essas técnicas de formatação de links em CSS permitem que você crie uma experiência mais agradável e interativa para os usuários da sua página web. Ao usar os pseudo-seletores \texttt{a:link}, \texttt{a:visited}, \texttt{a:hover} e \texttt{a:active} e transformar um link em botão, você pode personalizar a aparência dos links de acordo com o design da sua página.
+
+\section{Listas}
+
+Listas são elementos comuns em documentos HTML. Com CSS, podemos modificar a aparência das listas, tornando-as mais atraentes e personalizadas. Esta seção aborda as técnicas básicas para a formatação de listas usando CSS.
+
+\subsection{Tipo de Lista}
+
+A primeira propriedade que podemos modificar é o tipo de lista. O tipo padrão de lista é uma lista com marcadores (\textit{bullets}), mas também podemos ter listas numeradas. Para mudar o tipo de lista, usamos a propriedade \var{list-style-type}. Os valores possíveis incluem:
+
+\begin{itemize}
+\item \var{disc}: o marcador padrão, que é um círculo sólido;
+\item \var{circle}: um círculo aberto;
+\item \var{square}: um quadrado sólido;
+\item \var{decimal}: uma lista numerada com números arábicos;
+\item \var{lower-alpha}: uma lista numerada com letras minúsculas;
+\item \var{upper-alpha}: uma lista numerada com letras maiúsculas;
+\item \var{lower-roman}: uma lista numerada com números romanos em minúsculas;
+\item \var{upper-roman}: uma lista numerada com números romanos em maiúsculas.
+\end{itemize}
+
+O código \ref{exemplo_lista_tipo} mostra um exemplo de como mudar o tipo de lista.
+
+\begin{csscode}{Mudando o tipo de lista.}{exemplo_lista_tipo}
+ul {
+    list-style-type: square;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_lista_tipo}, a propriedade \var{list-style-type} é aplicada a um elemento \var{ul}, alterando o tipo de lista para quadrados sólidos.
+
+\subsection{Imagem do Marcador}
+
+Outra forma de personalizar uma lista é usando imagens como marcadores. Para fazer isso, usamos a propriedade \var{list-style-image}. O valor desta propriedade é a URL da imagem que será usada como marcador. É importante notar que a imagem é usada em vez do marcador padrão. Portanto, se a imagem não carregar corretamente, nenhum marcador será exibido. O código \ref{exemplo_lista_imagem} mostra um exemplo de como usar uma imagem como marcador.
+
+\begin{csscode}{Usando uma imagem como marcador.}{exemplo_lista_imagem}
+ul {
+    list-style-image: url('marcador.png');
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_lista_imagem}, a propriedade \var{list-style-image} é aplicada a um elemento \var{ul}, usando a imagem \var{marcador.png} como marcador.
+
+\subsection{Posição do Marcador}
+
+A propriedade \var{list-style-position} define a posição do marcador em relação ao conteúdo do item da lista. Por padrão, o marcador é exibido à esquerda do conteúdo do item, mas com essa propriedade é possível movê-lo para a direita ou para dentro do conteúdo do item.Os valores possíveis para a propriedade \var{list-style-position} são:
+
+\var{inside}: o marcador é colocado dentro do conteúdo do item da lista;
+\var{outside}: o marcador é colocado à esquerda do conteúdo do item da lista.
+
+O código \ref{exemplo_lista_posicao} mostra um exemplo de como mudar a posição do marcador na lista.
+
+\begin{csscode}{Mudando a posição do marcador na lista.}{exemplo_lista_posicao}
+ul {
+    list-style-position: inside;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_lista_posicao}, a propriedade \var{list-style-position} é aplicada a um elemento \var{ul}, movendo o marcador para dentro do conteúdo do item da lista.
+
+A propriedade \var{list-style-position} é especialmente útil quando usamos imagens como marcadores, pois podemos posicioná-las de forma mais precisa em relação ao conteúdo do item da lista. Por exemplo, se a imagem do marcador tiver um tamanho maior do que o padrão, podemos usar a propriedade \var{list-style-position: inside} para garantir que o conteúdo do item não fique muito afastado do marcador.
+
+\subsection{Margem, Preenchimento e Indentação}
+
+Por fim, podemos ajustar a margem, preenchimento e indentação das listas para deixá-las mais atraentes. Para isso, usamos as propriedades \var{margin}, \var{padding} e \var{text-indent}. A propriedade \var{margin} define a margem da lista, enquanto a propriedade \var{padding} define o espaço interno da lista. A propriedade \var{text-indent} define o recuo da primeira linha do texto da lista. O código \ref{exemplo_lista_margem} mostra um exemplo de formataçã de margens e indentação de uma lista.
+
+\begin{csscode}{Ajustando margem, preenchimento e indentação da lista.}{exemplo_lista_margem}
+ul {
+    margin: 0;
+    padding: 0;
+    text-indent: 10px;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_lista_margem}, as propriedades \var{margin}, \var{padding} e \var{text-indent} são aplicadas a um elemento \var{ul}, definindo margem, preenchimento e recuo do texto da lista. O código \ref{exemplo_lista_completa} mostra um exemplo completo de como formatar uma lista usando as técnicas apresentadas.
+
+\begin{csscode}{Exemplo completo de formatação de lista.}{exemplo_lista_completa}
+ul {    
+    list-style-image: url('marcador.png');
+    margin: 0;
+    padding: 0;
+    text-indent: 10px;
+}
+\end{csscode}
+
+Neste exemplo \ref{exemplo_lista_completa}, todas as técnicas apresentadas são aplicadas a um elemento \var{ul}, criando uma lista personalizada com uma imagem como marcador, margens externa e interna zeradas, e um recuo de 10 pixels na primeira linha do texto.
+
+A formatação de listas usando CSS é uma técnica útil para personalizar a aparência de documentos HTML. Com as propriedades \var{list-style-type}, \var{list-style-image}, \var{margin}, \var{padding} e \var{text-indent}, podemos criar listas mais atraentes e com uma aparência mais profissional.
 
 \section{Exercícios Propostos}
 
